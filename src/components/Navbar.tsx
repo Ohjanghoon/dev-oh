@@ -6,7 +6,7 @@ interface NavItem {
   label: string;
   link: string;
   className: string;
-  ref?: React.MutableRefObject<HTMLElement | null>;
+  ref?: React.MutableRefObject<any>;
 }
 
 interface NavbarOpenProps {
@@ -15,7 +15,7 @@ interface NavbarOpenProps {
 
 function Navbar({ navOpen }: NavbarOpenProps) {
   const lastActiveLink = useRef<HTMLElement | null>(null);
-  const activeBox = useRef<HTMLElement | null>(null);
+  const activeBox = useRef<HTMLDivElement | null>(null);
 
   const initActiveBox = () => {
     console.log(lastActiveLink.current);
@@ -55,17 +55,17 @@ function Navbar({ navOpen }: NavbarOpenProps) {
       ref: lastActiveLink,
     },
     {
-      label: "About",
+      label: "About Me",
       link: "#about",
       className: "nav-link",
     },
     {
-      label: "Work",
+      label: "Experiences",
       link: "#work",
       className: "nav-link",
     },
     {
-      label: "Reviews",
+      label: "Projects",
       link: "#reviews",
       className: "nav-link",
     },
