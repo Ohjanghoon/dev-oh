@@ -1,12 +1,12 @@
 // Node Modules
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
+import { Link, useLocation } from "react-router-dom";
 
 interface NavItem {
   label: string;
   link: string;
   className: string;
-  ref?: React.MutableRefObject<any>;
 }
 
 interface NavbarOpenProps {
@@ -14,27 +14,38 @@ interface NavbarOpenProps {
 }
 
 function Navbar({ navOpen }: NavbarOpenProps) {
+  const [activeLink, setActiveLink] = useState("");
   const lastActiveLink = useRef<HTMLElement | null>(null);
   const activeBox = useRef<HTMLDivElement | null>(null);
+  const location = useLocation();
 
-  const initActiveBox = () => {
-    console.log(lastActiveLink.current);
-    console.log(activeBox.current);
-    if (activeBox.current && lastActiveLink.current) {
-      activeBox.current.style.top = lastActiveLink.current.offsetTop + "px";
-      activeBox.current.style.left = lastActiveLink.current.offsetLeft + "px";
-      activeBox.current.style.width = lastActiveLink.current.offsetWidth + "px";
-      activeBox.current.style.height =
-        lastActiveLink.current.offsetHeight + "px";
+  // ActiveBox 초기화 및 위치 이동
+  const moveToActiveBox = () => {
+    const currentActiveLink = document.querySelector(
+      `.nav-link[href='${location.pathname}']`,
+    ) as HTMLElement; // 현재 location.pathname에 해당하는 링크를 선택
+    lastActiveLink.current = currentActiveLink;
+
+    if (currentActiveLink && activeBox.current) {
+      activeBox.current.style.top = currentActiveLink.offsetTop + "px";
+      activeBox.current.style.left = currentActiveLink.offsetLeft + "px";
+      activeBox.current.style.width = currentActiveLink.offsetWidth + "px";
+      activeBox.current.style.height = currentActiveLink.offsetHeight + "px";
     }
   };
 
-  useEffect(initActiveBox, []);
-  window.addEventListener("resize", initActiveBox);
+  useEffect(() => {
+    setActiveLink(location.pathname); // 현재 위치 업데이트
+    moveToActiveBox(); // activeBox를 현재 활성화된 Link로 이동
+  }, [location]);
 
-  const activeCurrentLink = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  window.addEventListener("resize", moveToActiveBox); // 창 크기 조정 시 activeBox 위치 재조정
+
+  const onClickActiveLinkHandler = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+  ) => {
     if (lastActiveLink.current) {
-      lastActiveLink.current?.classList.remove("active");
+      lastActiveLink.current.classList.remove("active");
     }
     event.currentTarget.classList.add("active");
     lastActiveLink.current = event.currentTarget;
@@ -50,28 +61,27 @@ function Navbar({ navOpen }: NavbarOpenProps) {
   const navItems: NavItem[] = [
     {
       label: "Home",
-      link: "#home",
-      className: "nav-link active",
-      ref: lastActiveLink,
+      link: "/",
+      className: "nav-link",
     },
     {
       label: "About Me",
-      link: "#about",
+      link: "/about",
       className: "nav-link",
     },
     {
       label: "Experiences",
-      link: "#work",
+      link: "/experiences",
       className: "nav-link",
     },
     {
       label: "Projects",
-      link: "#reviews",
+      link: "/projects",
       className: "nav-link",
     },
     {
       label: "Contact",
-      link: "#contact",
+      link: "/contact",
       className: "nav-link md:hidden",
     },
   ];
@@ -79,23 +89,20 @@ function Navbar({ navOpen }: NavbarOpenProps) {
   return (
     <nav className={"navbar" + (navOpen ? " active" : "")}>
       {navItems.map((item: NavItem, key) => (
-        <a
-          href={item.link}
-          ref={item.ref}
-          className={item.className}
+        <Link
+          to={item.link}
+          className={
+            item.className + `${activeLink === item.link ? " active" : ""}`
+          }
           key={key}
-          onClick={activeCurrentLink}
+          onClick={onClickActiveLinkHandler}
         >
           {item.label}
-        </a>
+        </Link>
       ))}
       <div className="active-box" ref={activeBox}></div>
     </nav>
   );
 }
-
-// Navbar.propTypes = {
-//   navOpen: PropTypes.bool.isRequired,
-// };
 
 export default Navbar;
