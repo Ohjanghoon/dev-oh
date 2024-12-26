@@ -24,3 +24,16 @@ export const fadeIn = (direction: string, delay: number) => {
     },
   };
 };
+
+export const dotVariant = {
+  animate: (i: number) => ({
+    y: ["-10vh", "80vh"], // 위에서 아래로 떨어짐
+    x: ["10vw", "-10vw"], // 좌측에서 우측으로 사선 이동
+    opacity: [0, 1, 0], // 페이드 인-아웃 효과
+    transition: {
+      duration: Math.random() * 20 + 3, // 3~6초의 랜덤 지속시간
+      repeat: Infinity,
+      delay: Math.random() * 2, // 시작 지연 시간
+    },
+  }),
+};

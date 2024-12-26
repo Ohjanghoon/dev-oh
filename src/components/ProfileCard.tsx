@@ -8,9 +8,14 @@ const ProfileCard = () => {
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: false, amount: 0.2 }}
-      className="hidden lg:flex lg:justify-center"
+      whileHover={{
+        scale: 1.05, // 카드 크기를 1.05배로 증가
+        rotate: -2, // 약간 회전시켜서 바운스 효과를 강조
+        transition: { type: "spring", stiffness: 200, damping: 10 }, // 바운스 효과
+      }}
+      className="z-10 hidden lg:flex lg:justify-center"
     >
-      <div className="flex h-[32rem] w-[22rem] flex-col items-center justify-center rounded-3xl bg-white/50 p-10 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]">
+      <div className="flex h-[32rem] w-[22rem] flex-col items-center justify-center rounded-3xl bg-white/50 p-10 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] md:rotate-2">
         <div className="rounded-3xl pt-10">
           <img
             src="/src/assets/dev-oh profile.png"
