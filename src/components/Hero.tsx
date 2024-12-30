@@ -13,7 +13,7 @@ function Hero() {
       <GalaxyBackground />
       <motion.div className="animated-gradient">
         <section id="home" className="container">
-          <div className="items-center lg:grid lg:grid-cols-2 lg:gap-10">
+          <div className="mt-20 items-center lg:grid lg:grid-cols-2 lg:gap-10">
             {/* Home 설명 영역 */}
             <motion.div
               variants={fadeIn("right", 0.4)}
@@ -54,7 +54,7 @@ function Hero() {
 
               {/* btn & socials */}
               <div className="flex flex-col items-center gap-12 md:flex-row">
-                <button className="neumorphisom-btn flex items-center gap-2 rounded-full border px-8 py-5 uppercase">
+                <button className="neumorphism-btn flex items-center gap-2 rounded-full border px-8 py-5 uppercase">
                   <span>Download CV</span>
                   <FiDownload className="text-secandary text-xl" />
                 </button>

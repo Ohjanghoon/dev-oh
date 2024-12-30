@@ -24,7 +24,7 @@ function Social() {
           <a
             href={item.path}
             key={index}
-            className="neumorphisom-btn flex h-12 w-12 items-center justify-center rounded-full text-2xl"
+            className="neumorphism-btn flex h-12 w-12 items-center justify-center rounded-full text-2xl"
           >
             {item.icon}
           </a>

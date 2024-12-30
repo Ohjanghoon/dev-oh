@@ -10,7 +10,7 @@ function Header() {
   const [navOpen, setNavOpen] = useState(true);
 
   return (
-    <header className="fixed left-0 top-0 z-40 flex h-20 w-full items-center">
+    <header className="fixed left-0 top-0 z-40 flex h-24 w-full items-center">
       <div className="mx-auto flex w-full max-w-screen-2xl items-center justify-between px-4 md:grid md:grid-cols-[1fr,3fr,1fr] md:px-6">
         {/* Logo 영역 */}
         <h1>

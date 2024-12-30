@@ -49,7 +49,7 @@ body {
 }
 
 .container {
-  @apply mx-auto min-h-screen px-4 pt-36 lg:px-8 lg:pt-40 xl:max-w-6xl;
+  @apply mx-auto min-h-screen px-4 pt-32 lg:px-8 xl:max-w-6xl;
 }
 .img-box {
   @apply overflow-hidden bg-zinc-700;
@@ -86,7 +86,7 @@ body {
 }
 
 .navbar .active-box {
-  @apply absolute -z-10 rounded-lg bg-zinc-50 transition-[top,left] duration-500;
+  @apply absolute -z-10 rounded-lg bg-zinc-100 transition-[top,left] duration-500;
 }
 
 /* Button */
@@ -95,19 +95,18 @@ body {
 }
 
 .btn-secondary {
-  @apply bg-[#0000C5] text-zinc-50 active:bg-[#0000C5]/80;
+  @apply active:bg-accent/80 bg-[#0000C5] text-zinc-50;
 }
 
-.neumorphisom-btn {
+.neumorphism-btn {
   @apply shadow-neumorphism bg-gray-200 font-semibold text-gray-700;
 }
 
-.neumorphisom-btn:hover {
+.neumorphism-btn:hover {
   @apply shadow-neumorphism-hover text-accent-hover transition-all duration-500;
 }
-
-.neumorphisom-btn:active {
-  @apply shadow-neumorphism-pressed;
+.neumorphism-btn:active {
+  @apply shadow-neumorphism-pressed bg-accent-hover/15 outline-none transition-all duration-500;
 }
 
 @keyframes gradientAnimation {
