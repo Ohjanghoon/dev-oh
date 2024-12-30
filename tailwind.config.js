@@ -15,8 +15,17 @@ export default {
         "background-light": "#e5e7eb",
         "background-dark": "#1c1c22",
         accent: {
-          DEFAULT: "#0000C5",
+          50: "#f0f3ff",
+          100: "#e4e9ff",
+          200: "#cdd6ff",
+          300: "#a5b2ff",
+          400: "#7280ff",
+          500: "#3a43ff",
           hover: "#2438e5",
+          700: "#0101ff",
+          DEFAULT: "#0000c5",
+          900: "#0202b0",
+          950: "#000778",
         },
         "text-light": "#FAFAFA",
         "text-hover": "#F5F5FF",
@@ -27,7 +36,7 @@ export default {
         "neumorphism-pressed":
           "inset 4px 4px 10px #a3a3a3, inset -4px -4px 10px #ffffff",
 
-        "neumorphism-blue": "6px 6px 16px #000080, -6px -6px 16px #4D4DFF",
+        "neumorphism-blue": "2px 2px 10px #0000C5, -2px -2px 10px #a5b2ff",
         "neumorphism-blue-hover":
           "4px 4px 10px #000080, -4px -4px 10px #4D4DFF",
         "neumorphism-blue-pressed":

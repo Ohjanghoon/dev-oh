@@ -5,6 +5,8 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Skill from "./components/Skill";
 import About from "./components/About";
+import Experiences from "./components/Experiences";
+import Projects from "./components/Projects";
 
 const App = () => {
   return (
@@ -24,6 +26,10 @@ const App = () => {
         />
         {/* About 페이지 */}
         <Route path="/about" element={<About />} />
+        {/* Experiences 페이지 */}
+        <Route path="/experiences" element={<Experiences />} />
+        {/* Projects 페이지 */}
+        <Route path="/projects" element={<Projects />} />
       </Routes>
     </BrowserRouter>
   );
