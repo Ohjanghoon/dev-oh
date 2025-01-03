@@ -5,12 +5,14 @@
 /* ------------------------------- *\
  * BASE
 \* ------------------------------- */
-html {
-  scroll-behavior: smooth;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-body {
-  @apply bg-background-light font-mono leading-loose tracking-tight text-gray-700;
+  body {
+    @apply bg-background-light font-mono text-base leading-loose tracking-tight text-gray-700;
+  }
 }
 
 .h1 {
@@ -49,7 +51,7 @@ body {
 }
 
 .container {
-  @apply mx-auto min-h-screen px-4 pt-32 lg:px-8 xl:max-w-6xl;
+  @apply mx-auto min-h-screen px-8 pt-5 xl:px-12 xl:pt-32;
 }
 .img-box {
   @apply overflow-hidden bg-zinc-700;
@@ -103,7 +105,7 @@ body {
 }
 
 .neumorphism-btn:hover {
-  @apply shadow-neumorphism-hover text-accent-hover transition-all duration-500;
+  @apply shadow-neumorphism-hover transition-all duration-500;
 }
 .neumorphism-btn:active {
   @apply shadow-neumorphism-pressed bg-accent-hover/15 outline-none transition-all duration-500;
@@ -128,6 +130,5 @@ body {
 }
 
 .stack-icon {
-  width: 1.5rem;
-  height: 1.5rem;
+  @apply h-[50px] w-[50px];
 }

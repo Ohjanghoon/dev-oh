@@ -5,6 +5,14 @@ import tailwindScrollbar from "tailwind-scrollbar";
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      xs: "400px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
     extend: {
       fontFamily: {
         sans: ["Inter", "sans-serif"],
@@ -34,7 +42,7 @@ export default {
         neumorphism: "6px 6px 16px #a3a3a3, -6px -6px 16px #ffffff",
         "neumorphism-hover": "4px 4px 10px #a3a3a3, -4px -4px 10px #ffffff",
         "neumorphism-pressed":
-          "inset 4px 4px 10px #a3a3a3, inset -4px -4px 10px #ffffff",
+          "inset 4px 4px 8px #a3a3a3, inset -3px -3px 8px #ffffff",
 
         "neumorphism-blue": "2px 2px 10px #0000C5, -2px -2px 10px #a5b2ff",
         "neumorphism-blue-hover":
