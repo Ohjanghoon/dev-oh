@@ -3,9 +3,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // Components
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Skill from "./components/Skill";
+import Skill from "./components/Experiences/Skill";
 import About from "./components/About";
-import Experiences from "./components/Experiences";
+import Experiences from "./components/Experiences/Experiences";
 import Projects from "./components/Projects";
 
 const App = () => {
