@@ -3,13 +3,20 @@ import { ProjectItem } from "./Projects";
 
 interface CardProps {
   data: ProjectItem;
+  handleDialog: (isOpen: boolean) => void;
+  handleSetData: (data: ProjectItem) => void;
 }
 
-function Card({ data: item }: CardProps) {
+function Card({ data: item, handleDialog, handleSetData }: CardProps) {
+  const openDialog = () => {
+    handleDialog(true);
+    handleSetData(item);
+  };
   return (
     <div
       key={item.id}
       className="card flex w-full flex-col gap-2 rounded-2xl border-[1px] border-zinc-600 bg-[#f4f3f3] p-5"
+      onClick={openDialog}
     >
       <img
         src="/src/assets/dev-oh avatar.png"
