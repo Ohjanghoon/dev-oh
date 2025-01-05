@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { fadeIn } from "../util/variants";
+import { fadeIn } from "../utils/variants";
 
-import ProfileCard from "./ProfileCard";
-import Social from "./Social";
+import ProfileCard from "../components/ProfileCard";
+import Social from "../components/Social";
 import { FiDownload } from "react-icons/fi";
-import FloatingCard from "./FloatingCard";
-import GalaxyBackground from "./BackgroundAnimation";
+import FloatingCard from "../components/FloatingCard";
+import GalaxyBackground from "../components/BackgroundAnimation";
 
 function Hero() {
   return (
@@ -44,7 +44,7 @@ function Hero() {
               <div className="font-mono">
                 <h2 className="h2 mb-8 mt-3 break-keep">
                   Hello I'm <br />
-                  <p className="text-accent-hover mt-3">JangHoon Oh</p>
+                  <p className="mt-3 text-accent-hover">JangHoon Oh</p>
                 </h2>
                 <p className="mb-9 max-w-[500px]">
                   성장을 위해 끊임없이 노력하고, <br />

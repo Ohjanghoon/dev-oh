@@ -51,7 +51,7 @@
 }
 
 .container {
-  @apply mx-auto min-h-screen px-8 pt-5 xl:px-12 xl:pt-32;
+  @apply mx-auto min-h-screen px-8 py-5 lg:px-12 lg:py-32;
 }
 .img-box {
   @apply overflow-hidden bg-zinc-700;

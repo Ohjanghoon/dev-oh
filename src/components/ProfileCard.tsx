@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fadeIn } from "../util/variants";
+import { fadeIn } from "../utils/variants";
 
 const ProfileCard = () => {
   return (

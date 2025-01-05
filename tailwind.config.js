@@ -22,6 +22,11 @@ export default {
       colors: {
         "background-light": "#e5e7eb",
         "background-dark": "#1c1c22",
+        "text-dark": "#1c1c22",
+        "border-light": "#e5e7eb",
+        "border-dark": "#1c1c22",
+        "border-accent": "#3a43ff",
+        "border-hover": "#2438e5",
         accent: {
           50: "#f0f3ff",
           100: "#e4e9ff",

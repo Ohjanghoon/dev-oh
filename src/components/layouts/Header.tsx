@@ -4,7 +4,7 @@ import React from "react";
 import { useState } from "react";
 
 // Components
-import Navbar from "./Navbar";
+import Navbar from "../Navbar";
 
 function Header() {
   const [navOpen, setNavOpen] = useState(true);

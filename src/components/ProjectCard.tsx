@@ -1,5 +1,5 @@
-import { RiReactjsFill } from "react-icons/ri";
-import { ProjectItem } from "./Projects";
+// types
+import { ProjectItem } from "../types/projectTypes";
 
 interface CardProps {
   data: ProjectItem;
@@ -7,7 +7,7 @@ interface CardProps {
   handleSetData: (data: ProjectItem) => void;
 }
 
-function Card({ data: item, handleDialog, handleSetData }: CardProps) {
+function ProjectCard({ data: item, handleDialog, handleSetData }: CardProps) {
   const openDialog = () => {
     handleDialog(true);
     handleSetData(item);
@@ -36,4 +36,4 @@ function Card({ data: item, handleDialog, handleSetData }: CardProps) {
   );
 }
 
-export default Card;
+export default ProjectCard;

@@ -65,7 +65,7 @@ function Navbar({ navOpen }: NavbarOpenProps) {
       className: "nav-link",
     },
     {
-      label: "About Me",
+      label: "About",
       link: "/about",
       className: "nav-link",
     },

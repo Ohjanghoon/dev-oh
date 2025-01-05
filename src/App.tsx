@@ -1,12 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // Components
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Skill from "./components/Experiences/Skill";
-import About from "./components/About";
-import Experiences from "./components/Experiences/Experiences";
-import Projects from "./components/Projects";
+import Header from "./components/layouts/Header";
+import Hero from "./pages/Hero";
+import About from "./pages/About";
+import Experiences from "./pages/Experiences";
+import Projects from "./pages/Projects";
 
 const App = () => {
   return (
@@ -14,13 +13,11 @@ const App = () => {
       {/* Header는 모든 페이지에서 공통으로 렌더링 */}
       <Header />
       <Routes>
-        {/* 메인 경로에 Hero와 Skill을 렌더링 */}
         <Route
           path="/"
           element={
             <main>
               <Hero />
-              <Skill />
             </main>
           }
         />

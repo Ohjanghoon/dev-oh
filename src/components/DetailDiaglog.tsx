@@ -1,6 +1,9 @@
+// node modules
 import { AnimatePresence } from "motion/react";
 import { motion } from "framer-motion";
-import { ProjectItem } from "./Projects";
+
+// types
+import { ProjectItem } from "../types/projectTypes";
 
 interface Props {
   data: ProjectItem;
