@@ -19,14 +19,14 @@ function ProjectCard({ data: item, handleDialog, handleSetData }: CardProps) {
       onClick={openDialog}
     >
       <img
-        src="/src/assets/dev-oh avatar.png"
+        src={item.thumbnail}
         alt=""
-        className="max-h-[180px] w-full rounded-2xl object-cover"
+        className="max-h-[180px] w-full rounded-2xl object-center"
       />
       <h3 className="text-lg font-semibold">{item.title}</h3>
       <p className="text-sm">{item.description}</p>
       <div className="mt-2 flex flex-wrap gap-2 text-xs">
-        {item.technologies.map((tech, index) => (
+        {item.technologies.slice(0, 4).map((tech, index) => (
           <span key={index} className="rounded bg-gray-200 px-2 py-1">
             {tech}
           </span>
