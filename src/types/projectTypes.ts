@@ -1,4 +1,4 @@
-export interface Project {
+export interface ProjectDTO {
   category: string;
   items: ProjectItem[];
 }
@@ -6,6 +6,10 @@ export interface Project {
 export interface ProjectItem {
   id: string; // 프로젝트 id
   title: string; // 프로젝트 제목
+  type: {
+    name: string; // 프로젝트 종류
+    color: string;
+  };
   description: string; // 프로젝트 설명
   technologies: string[]; // 사용 기술 스택
   role: string; // 프로젝트에서의 역할

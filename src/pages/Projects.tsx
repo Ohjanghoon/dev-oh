@@ -38,13 +38,16 @@ const Projects = () => {
         </p>
         <TabGroup>
           <TabList className="flex justify-center gap-5">
-            <Tab className="neumorphism-btn w-1/6 rounded-full px-1 py-2 text-sm/6 font-semibold data-[selected]:bg-accent-hover/15 data-[selected]:text-accent-hover data-[selected]:shadow-neumorphism-pressed focus:outline-none">
+            <Tab
+              value="all"
+              className="neumorphism-btn w-1/6 rounded-xl px-1 py-2 text-sm/6 font-semibold data-[selected]:bg-accent-hover/15 data-[selected]:text-accent-hover data-[selected]:shadow-neumorphism-pressed focus:outline-none"
+            >
               # All
             </Tab>
             {projectList.map((project, index) => (
               <Tab
                 key={index}
-                className="neumorphism-btn w-1/6 rounded-full p-2 text-sm/6 font-semibold data-[selected]:bg-accent-hover/15 data-[selected]:text-accent-hover data-[selected]:shadow-neumorphism-pressed focus:outline-none"
+                className="neumorphism-btn w-1/6 rounded-xl p-2 text-sm/6 font-semibold data-[selected]:bg-accent-hover/15 data-[selected]:text-accent-hover data-[selected]:shadow-neumorphism-pressed focus:outline-none"
               >
                 # {project.category}
               </Tab>

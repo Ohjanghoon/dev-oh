@@ -21,11 +21,11 @@ function ProjectCard({ data: item, handleDialog, handleSetData }: CardProps) {
       <img
         src={item.thumbnail}
         alt=""
-        className="max-h-[180px] w-full rounded-2xl object-center"
+        className="h-full w-full rounded-xl object-fill md:max-h-[180px]"
       />
-      <h3 className="text-lg font-semibold">{item.title}</h3>
-      <p className="text-sm">{item.description}</p>
-      <div className="mt-2 flex flex-wrap gap-2 text-xs">
+      <h3 className="text-lg font-semibold tracking-tight">{item.title}</h3>
+
+      <div className="flex flex-wrap gap-2 text-xs">
         {item.technologies.slice(0, 4).map((tech, index) => (
           <span key={index} className="rounded bg-gray-200 px-2 py-1">
             {tech}

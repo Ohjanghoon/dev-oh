@@ -135,7 +135,7 @@
 
 .swiper {
   width: 100%;
-  height: 300px;
+
   margin-left: auto;
   margin-right: auto;
 }
@@ -161,9 +161,18 @@
   opacity: 1;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.swiper {
+  padding-bottom: 35px; /* 하단 공간 확보 */
+  overflow-y: visible !important; /* 부모 요소의 overflow 속성 수정 */
+}
+
+.swiper-pagination {
+}
+
+.customPagination .swiper-pagination-bullet {
+  background: #444;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-accent-hover;
 }
