@@ -1,11 +1,11 @@
-// Node Modules
+// node Modules
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-// Components
+// components
 import App from "./App.tsx";
 
-// CSS
+// styles
 import "./index.css";
 
 createRoot(document.getElementById("root")!).render(

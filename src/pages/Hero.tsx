@@ -1,73 +1,90 @@
+// node modules
 import { motion } from "framer-motion";
-import { fadeIn } from "../utils/variants";
 
+// components
 import ProfileCard from "../components/ProfileCard";
 import Social from "../components/Social";
-import { FiDownload } from "react-icons/fi";
-import FloatingCard from "../components/FloatingCard";
 import GalaxyBackground from "../components/BackgroundAnimation";
+
+// utils
+import { fadeIn } from "../utils/variants";
+
+// icons
+import { FiDownload } from "react-icons/fi";
 
 function Hero() {
   return (
     <>
-      <GalaxyBackground />
       <motion.div className="animated-gradient">
-        <section id="home" className="container">
-          <div className="mt-20 items-center lg:grid lg:grid-cols-2 lg:gap-10">
-            {/* Home 설명 영역 */}
-            <motion.div
-              variants={fadeIn("right", 0.4)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.2 }}
-              className="z-10 h-full w-full"
-            >
-              {/* Home 설명__프로필 영역 */}
-              <div className="mb-4 flex items-center gap-3 pt-10">
-                <div className="flex items-center gap-1.5 text-sm tracking-wide text-gray-700">
-                  <figure className="img-box h-9 w-9 rounded-lg">
-                    <img
-                      src="/src/assets/dev-oh avatar.png"
-                      width={40}
-                      height={40}
-                      alt="dev-oh portrait"
-                      className="img-cover"
-                    />
-                  </figure>
+        <section className="container">
+          <div className="">
+            <GalaxyBackground />
+            <div className="mt-0 flex flex-col items-center justify-around md:mt-28 md:flex-row">
+              {/* Home 설명 영역 */}
+              <motion.div
+                variants={fadeIn("right", 0.4)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.2 }}
+                className="z-10 order-2 p-4 md:order-1"
+              >
+                {/* Home 설명__프로필 영역 */}
+                <div className="text-text-secondary flex items-center gap-1.5 pt-5 text-sm tracking-wide">
+                  <img
+                    src="/src/assets/dev-oh avatar.png"
+                    alt="dev-oh portrait"
+                    className="h-9 w-9 rounded-lg"
+                  />
                   <span className="relative h-2 w-2 rounded-full bg-emerald-400">
                     <span className="absolute inset-0 animate-ping rounded-full bg-emerald-400"></span>
                   </span>
                   Active
                 </div>
-              </div>
-              {/* Home 설명__슬로건 영역 */}
-              <div className="font-mono">
-                <h2 className="h2 mb-8 mt-3 break-keep">
-                  Hello I'm <br />
-                  <p className="mt-3 text-accent-hover">JangHoon Oh</p>
-                </h2>
-                <p className="mb-9 max-w-[500px]">
-                  성장을 위해 끊임없이 노력하고, <br />
-                  협력의 가치를 소중히 여기는 2년차 프론트엔드 개발자 입니다.
-                </p>
-              </div>
 
-              {/* btn & socials */}
-              <div className="flex flex-col items-center gap-12 md:flex-row">
-                <button className="neumorphism-btn flex items-center gap-2 rounded-full border px-8 py-5 uppercase">
-                  <span>Download CV</span>
-                  <FiDownload className="text-secandary text-xl" />
-                </button>
-                <div className="mb-8 md:mb-0">
-                  <Social />
+                {/* Home 설명__슬로건 영역 */}
+                <div className="mt-4">
+                  <h1 className="h1 break-keep font-mono">
+                    Hello I'm <br />
+                    <p className="mt-3 text-accent-hover">JangHoon Oh</p>
+                  </h1>
+                  <p className="mt-5 max-w-[500px]">
+                    성장을 위해 끊임없이 노력하고, <br />
+                    협력의 가치를 소중히 여기는 2년차 프론트엔드 개발자 입니다.
+                  </p>
                 </div>
-              </div>
-              {/* <div className="flex items-center gap-3">
+
+                {/* btn & socials */}
+                <div className="mt-8 flex items-center justify-center gap-12">
+                  <button className="neumorphism-btn flex items-center gap-2 rounded-full border px-8 py-5 uppercase">
+                    <span className="text-[14px] xs:text-base">
+                      Download CV
+                    </span>
+                    <FiDownload className="text-secandary text-xl" />
+                  </button>
+                  <div className="">
+                    <Social />
+                  </div>
+                </div>
+                {/* <div className="flex items-center gap-3">
       <Social />
     </div> */}
-            </motion.div>
+              </motion.div>
 
-            <ProfileCard />
+              <motion.div
+                variants={fadeIn("left", 0.8)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.2 }}
+                whileHover={{
+                  scale: 1.05, // 카드 크기를 1.05배로 증가
+                  rotate: -2, // 약간 회전시켜서 바운스 효과를 강조
+                  transition: { type: "spring", stiffness: 200, damping: 10 }, // 바운스 효과
+                }}
+                className="z-10 order-1 md:order-2"
+              >
+                <ProfileCard />
+              </motion.div>
+            </div>
           </div>
         </section>
       </motion.div>

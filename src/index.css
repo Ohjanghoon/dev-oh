@@ -9,14 +9,21 @@
   html {
     scroll-behavior: smooth;
   }
+}
 
-  body {
-    @apply bg-background-light font-mono text-base leading-loose tracking-tight text-gray-700;
-  }
+body {
+  @apply bg-background-light font-mono text-base leading-loose tracking-tight text-gray-700;
+}
+header {
+  @apply fixed left-0 top-0 z-40 flex h-24 w-full items-center;
+}
+
+.container {
+  @apply mx-auto min-h-screen py-24;
 }
 
 .h1 {
-  @apply text-[48px] font-semibold leading-[1.1] xl:text-[88px];
+  @apply text-[44px] font-semibold leading-[1.1] xl:text-[60px];
 }
 .h2 {
   @apply text-[40px] font-semibold leading-[1.1] xl:text-[48px];
@@ -48,17 +55,6 @@
     "wght" 400,
     "GRAD" 0,
     "opsz" 24;
-}
-
-.container {
-  @apply mx-auto min-h-screen px-8 py-5 lg:px-12 lg:py-32;
-}
-.img-box {
-  @apply overflow-hidden bg-zinc-700;
-}
-
-.img-cover {
-  @apply h-full w-full object-cover;
 }
 
 /* ------------------------------- *\

@@ -1,6 +1,7 @@
+// node modules
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-// Components
+// components
 import Header from "./components/layouts/Header";
 import Hero from "./pages/Hero";
 import About from "./pages/About";
