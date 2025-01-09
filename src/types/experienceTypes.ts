@@ -9,6 +9,7 @@ export interface ExperienceDTO {
 }
 
 export interface WorkDTO {
+  id: string;
   name: string;
   duration: string;
   month: string;
@@ -21,6 +22,7 @@ interface WorkItem {
 }
 
 export interface EducationDTO {
+  id: string;
   name: string;
   duration: string;
   icon: IconType;

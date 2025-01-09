@@ -10,16 +10,15 @@ import { experiencesList } from "../data/experienceData";
 
 function Experiences() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: { delay: 0.4, duration: 0.4, ease: "easeIn" },
-      }}
-      className="min-h-[80vh] py-12 xl:py-0"
-    >
-      <section className="container">
-        <TabGroup className="flex flex-col gap-0 py-12 lg:flex-row lg:gap-[60px] lg:py-3">
+    <section className="container">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 0.4, duration: 0.4, ease: "easeIn" },
+        }}
+      >
+        <TabGroup className="flex flex-col gap-0 md:mx-20 md:mt-14 lg:flex-row lg:gap-[40px]">
           <TabList className="mx-auto inline-flex h-auto w-full max-w-[280px] flex-row justify-center gap-3 p-1 text-sm lg:mx-0 lg:flex-col lg:justify-start lg:gap-0 xl:max-w-[330px]">
             {experiencesList.map((experience, index) => {
               const Icon = experience.icon;
@@ -47,7 +46,7 @@ function Experiences() {
                     My {experience.title}
                   </h3>
                   {/* 제목 설명 영역 */}
-                  <p className="my-2 w-full text-center text-sm font-light xs:text-base lg:text-start">
+                  <p className="my-2 w-full break-keep text-center text-sm font-light tracking-tighter sm:text-base lg:text-start">
                     "{experience.description}"
                   </p>
                   {/* 본문 영역 */}
@@ -65,8 +64,8 @@ function Experiences() {
             })}
           </TabPanels>
         </TabGroup>
-      </section>
-    </motion.div>
+      </motion.div>
+    </section>
   );
 }
 

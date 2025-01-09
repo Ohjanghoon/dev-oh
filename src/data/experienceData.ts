@@ -30,8 +30,7 @@ export const experiencesList: ExperienceDTO[] = [
   {
     title: "Work",
     id: "work",
-    description:
-      "도전과 협업을 통해 끊임없이 성장하며 쌓아온 실무 경험들입니다.",
+    description: "도전과 협업을 통해 성장하며 쌓아온 실무 경험들입니다.",
     icon: FaBriefcase,
     content: Work,
   },
@@ -45,8 +44,7 @@ export const experiencesList: ExperienceDTO[] = [
   {
     title: "Skills",
     id: "skill",
-    description:
-      "끊임없이 확장하고 성장한 기술 역량입니다. 이러한 기술들을 사용해 봤어요.",
+    description: "끊임없이 확장하고 성장한 기술 역량입니다.",
     icon: HiCircleStack,
     content: Skill,
   },
@@ -55,6 +53,7 @@ export const experiencesList: ExperienceDTO[] = [
 // 실무 경험 데이터
 export const workList: WorkDTO[] = [
   {
+    id: "work_01",
     name: "IGI Korea",
     duration: "2022.12 ~ 2024.09",
     month: "1년 10개월",
@@ -87,16 +86,19 @@ export const workList: WorkDTO[] = [
 // 교육 경험 데이터
 export const educationList: EducationDTO[] = [
   {
+    id: "education_01",
     name: "KH정보교육원(JAVA 과정) 수료",
     duration: "2022.02 ~ 2022.09",
     icon: FaCode,
   },
   {
+    id: "education_02",
     name: "제주대학교(컴퓨터공학과) 졸업",
     duration: "2013.03 ~ 2021.08",
     icon: FaGraduationCap,
   },
   {
+    id: "education_03",
     name: "대기고등학교 졸업",
     duration: "2010.03 ~ 2013.02",
     icon: FaSchool,
@@ -106,7 +108,7 @@ export const educationList: EducationDTO[] = [
 // 기술 경험 데이터
 export const skillList: SkillDTO[] = [
   {
-    id: "category_01",
+    id: "skill_category_01",
     category: "Languages",
     list: [
       {
@@ -125,7 +127,7 @@ export const skillList: SkillDTO[] = [
     ],
   },
   {
-    id: "category_02",
+    id: "skill_category_02",
     category: "Frontend",
     list: [
       {
@@ -147,7 +149,7 @@ export const skillList: SkillDTO[] = [
     ],
   },
   {
-    id: "category_03",
+    id: "skill_category_03",
     category: "ETC",
     list: [
       {

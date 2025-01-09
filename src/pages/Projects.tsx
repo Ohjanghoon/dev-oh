@@ -37,17 +37,17 @@ const Projects = () => {
           Explore the projects I've worked on in various categories.
         </p>
         <TabGroup>
-          <TabList className="flex justify-center gap-5">
+          <TabList className="grid grid-cols-2 place-content-center place-items-center gap-5 md:grid-cols-[repeat(4,_minmax(100px,200px))]">
             <Tab
               value="all"
-              className="neumorphism-btn w-1/6 rounded-xl px-1 py-2 text-sm/6 font-semibold data-[selected]:bg-accent-hover/15 data-[selected]:text-accent-hover data-[selected]:shadow-neumorphism-pressed focus:outline-none"
+              className="neumorphism-btn w-full rounded-xl px-1 py-2 text-sm/6 font-semibold data-[selected]:bg-accent-hover/15 data-[selected]:text-accent-hover data-[selected]:shadow-neumorphism-pressed focus:outline-none"
             >
               # All
             </Tab>
             {projectList.map((project, index) => (
               <Tab
                 key={index}
-                className="neumorphism-btn w-1/6 rounded-xl p-2 text-sm/6 font-semibold data-[selected]:bg-accent-hover/15 data-[selected]:text-accent-hover data-[selected]:shadow-neumorphism-pressed focus:outline-none"
+                className="neumorphism-btn w-full rounded-xl p-2 text-sm/6 font-semibold data-[selected]:bg-accent-hover/15 data-[selected]:text-accent-hover data-[selected]:shadow-neumorphism-pressed focus:outline-none"
               >
                 # {project.category}
               </Tab>

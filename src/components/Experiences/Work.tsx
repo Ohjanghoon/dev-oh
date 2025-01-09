@@ -8,11 +8,11 @@ function Work() {
         return (
           <div
             className="relative w-full rounded-3xl shadow-lg ring-[0.3px] ring-zinc-700/20"
-            key={work.name}
+            key={work.id}
           >
             {/* 도트 포인트 */}
-            <span className="absolute left-4 top-4 h-2 w-2 rounded-full bg-accent-700/25"></span>
-            <span className="absolute bottom-4 right-4 h-2 w-2 rounded-full bg-accent-700/55"></span>
+            <span className="absolute left-4 top-4 h-2 w-2 rounded-full bg-accent-hover/25"></span>
+            <span className="absolute bottom-4 right-4 h-2 w-2 rounded-full bg-accent-hover/55"></span>
 
             {/* 본문 영역 */}
             <div className="px-10 py-7 text-sm/6">
@@ -28,17 +28,13 @@ function Work() {
               {/* 역할, 프로젝트, 성과 내용 영역 */}
               {work.items.map((item) => {
                 return (
-                  <div className="mt-3">
+                  <div className="mt-3" key={item.category}>
                     <h4 className="text-base font-semibold underline underline-offset-2">
                       {item.category}
                     </h4>
                     <ul aria-hidden="true">
                       {item.content.map((content, index) => {
-                        return (
-                          <li key={`${item.category} + ${index}`}>
-                            &middot; {content}
-                          </li>
-                        );
+                        return <li key={index}>&middot; {content}</li>;
                       })}
                     </ul>
                   </div>
