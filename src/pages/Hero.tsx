@@ -54,7 +54,7 @@ function Hero() {
 
               {/* btn & socials */}
               <div className="mt-8 flex items-center justify-center gap-12">
-                <button className="neumorphism-btn flex items-center gap-2 rounded-full border px-8 py-5 uppercase">
+                <button className="neumorphism-btn flex items-center gap-2 rounded-full border px-8 py-5 font-semibold uppercase">
                   <span className="text-[14px] xs:text-base">Download CV</span>
                   <FiDownload className="text-secandary text-xl" />
                 </button>

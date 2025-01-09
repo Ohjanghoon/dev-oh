@@ -30,7 +30,7 @@ export const experiencesList: ExperienceDTO[] = [
   {
     title: "Work",
     id: "work",
-    description: "도전과 협업을 통해 성장하며 쌓아온 실무 경험들입니다.",
+    description: "실무에서 협업을 통해 성장해온 경험들입니다.",
     icon: FaBriefcase,
     content: Work,
   },

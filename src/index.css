@@ -29,7 +29,7 @@ header {
   @apply text-[40px] font-semibold leading-[1.1] xl:text-[48px];
 }
 .h3 {
-  @apply text-[20px] font-semibold leading-[1.1] xl:text-[24px];
+  @apply text-[30px] font-semibold leading-[1.1] xl:text-[36px];
 }
 
 /* ------------------------------- *\
@@ -97,14 +97,14 @@ header {
 }
 
 .neumorphism-btn {
-  @apply bg-gray-200 font-semibold text-gray-700 shadow-neumorphism;
+  @apply bg-gray-200 text-gray-700 shadow-neumorphism;
 }
 
 .neumorphism-btn:hover {
   @apply shadow-neumorphism-hover transition-all duration-500;
 }
 .neumorphism-btn:active {
-  @apply bg-accent-hover/15 shadow-neumorphism-pressed outline-none transition-all duration-500;
+  @apply bg-accent-hover/5 shadow-neumorphism-pressed outline-none transition-all duration-500;
 }
 
 @keyframes gradientAnimation {
