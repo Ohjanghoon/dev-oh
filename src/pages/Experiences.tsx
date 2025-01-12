@@ -23,14 +23,13 @@ function Experiences() {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.2 }}
-          className="my-8 text-center md:mx-20 md:my-10 md:text-start"
+          className="my-8 text-center md:mx-20"
         >
-          <h2 className="h3 inline-block rounded-lg bg-gradient-to-r from-accent to-accent-400 bg-clip-text font-[900] uppercase tracking-wider text-transparent">
+          <h3 className="h3 bg-gradient-to-r from-accent/90 to-accent-400 bg-clip-text uppercase tracking-wider text-transparent">
             Experiences
-          </h2>
-          {/* <p className="my-2 h-[4px] bg-accent/30"></p> */}
-          <p className="my-2 h-[2px] bg-gradient-to-r from-accent via-transparent to-accent md:to-transparent"></p>
-          <p className="text-text-secondary text-[11px] md:text-base">
+          </h3>
+          <p className="mx-auto my-2 h-[2px] w-full bg-gradient-to-r from-transparent via-accent-hover to-transparent"></p>
+          <p className="text-[11px] text-text-secondary md:text-sm">
             실무 경험부터 학업과 교육, 그리고 제가 다룰 수 있는 기술 스택까지,
             저의 성장 여정을 담았습니다.
           </p>

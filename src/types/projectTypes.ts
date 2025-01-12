@@ -1,3 +1,5 @@
+import { IconType } from "react-icons";
+
 export interface ProjectDTO {
   category: string;
   items: ProjectItem[];
@@ -12,6 +14,7 @@ export interface ProjectItem {
   };
   description: string; // 프로젝트 설명
   technologies: string[]; // 사용 기술 스택
+  icon: IconType;
   role: string; // 프로젝트에서의 역할
   duration: {
     start: string; // 시작 날짜 (YYYY-MM-DD)
