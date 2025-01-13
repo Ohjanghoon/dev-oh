@@ -6,6 +6,7 @@ import { useState } from "react";
 // components
 import ProjectCard from "../components/ProjectCard";
 import DetailDialog from "../components/DetailDiaglog";
+import Title from "../components/layouts/Title";
 
 // utils
 import { fadeIn } from "../utils/variants";
@@ -42,15 +43,11 @@ const Projects = () => {
           viewport={{ once: false, amount: 0.2 }}
           className="my-8 text-center md:mx-20"
         >
-          {/* <p className="mx-auto my-3 h-[2px] w-full bg-gradient-to-r from-accent-hover/20 via-transparent to-accent-hover/20 md:w-2/3"></p> */}
-          <h3 className="h3 inline-block bg-gradient-to-r from-accent/90 to-accent-400 bg-clip-text text-lg font-[900] uppercase tracking-wider text-transparent">
-            Projects
-          </h3>
-          <p className="mx-auto my-2 h-[2px] w-full bg-gradient-to-r from-transparent via-accent-hover to-transparent"></p>
-          <p className="text-[11px] text-text-secondary md:text-sm">
-            다양한 기술을 적용하고 문제를 해결하며 완성한 프로젝트를
-            확인해보세요.
-          </p>
+          <Title
+            title="Projects"
+            description="다양한 기술을 적용하고 문제를 해결하며 완성한 프로젝트를
+            확인해보세요."
+          />
         </motion.div>
 
         <motion.div
