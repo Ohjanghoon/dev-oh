@@ -233,10 +233,9 @@ header {
   pointer-events: none; /* 클릭 이벤트 방지 */
 }
 
+.card {
+  @apply shadow-lg ring-[0.3px] ring-zinc-700/20;
+}
 .card:hover .border-anim {
   animation: border-rotate 0.3s linear forwards;
-}
-.card:hover {
-  background-color: #2438e5;
-  transition: all;
 }

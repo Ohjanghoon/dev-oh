@@ -27,6 +27,7 @@ export default {
         text: {
           DEFAULT: "#374151",
           secondary: "#6b7280",
+          light: "#e5e7eb",
         },
 
         "text-dark": "#1c1c22",

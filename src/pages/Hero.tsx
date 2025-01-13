@@ -28,13 +28,8 @@ function Hero() {
               className="z-10 order-2 p-4 md:order-1"
             >
               {/* Home 설명__프로필 영역 */}
-              <div className="text-text-secondary flex items-center gap-1.5 pt-5 text-sm tracking-wide">
-                <img
-                  src="/src/assets/dev-oh avatar.png"
-                  alt="dev-oh portrait"
-                  className="h-9 w-9 rounded-lg"
-                />
-                <span className="relative h-2 w-2 rounded-full bg-emerald-400">
+              <div className="flex items-center gap-1.5 pt-5 text-sm tracking-wide text-text-secondary">
+                <span className="relative h-3 w-3 rounded-full bg-emerald-400">
                   <span className="absolute inset-0 animate-ping rounded-full bg-emerald-400"></span>
                 </span>
                 Active
