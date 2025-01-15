@@ -77,7 +77,7 @@ function About() {
                   </div>
                   <div className="flex">
                     <img
-                      src="src/assets/dev-oh avatar.png"
+                      src="/public/assets/dev-oh avatar.png"
                       alt="dev-oh portrait"
                       className="h-[40px] w-[40px] rounded-full"
                     />
@@ -106,7 +106,7 @@ function About() {
                 기록을 남기고 있습니다.
               </p>
               <img
-                src="src/assets/notion-avatar-right.png"
+                src="src/public/assets/notion-avatar-right.png"
                 alt="dev-oh portrait"
                 className="h-[50px] w-[50px] rounded-xl"
               />

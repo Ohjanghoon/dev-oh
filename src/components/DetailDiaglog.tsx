@@ -2,7 +2,7 @@
 import { AnimatePresence } from "motion/react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Pagination, Thumbs } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 
 // icons
 import {
@@ -16,14 +16,11 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 import { ProjectItem } from "../types/projectTypes";
 
 // styles
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/thumbs";
-import { useState } from "react";
-
-import styles from "./Swiper.module.css";
+// import "swiper/css";
+// import "swiper/css/free-mode";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
+// import "swiper/css/thumbs";
 
 interface Props {
   data: ProjectItem;
@@ -31,8 +28,6 @@ interface Props {
 }
 
 function DetailDialog({ data: item, handleOpenDialog }: Props) {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
   const onClose = () => {
     handleOpenDialog(false);
   };

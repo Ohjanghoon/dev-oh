@@ -57,12 +57,12 @@ export const projectList: ProjectDTO[] = [
         ],
         repositoryUrl: "https://github.com/username/galaxy-portfolio",
         liveDemoUrl: "https://nkinfo.unikorea.go.kr/nkp/main/portalMain.do",
-        thumbnail: "/src/assets/images/projects/project_05_01.png",
+        thumbnail: "/public/assets/images/projects/project_05_01.png",
         screenshots: [
-          "/src/assets/images/projects/corporate/project_05_01.png",
-          "/src/assets/images/projects/corporate/project_05_02.png",
-          "/src/assets/images/projects/corporate/project_05_03.png",
-          "/src/assets/images/projects/corporate/project_05_04.png",
+          "/public/assets/images/projects/corporate/project_05_01.png",
+          "/public/assets/images/projects/corporate/project_05_02.png",
+          "/public/assets/images/projects/corporate/project_05_03.png",
+          "/public/assets/images/projects/corporate/project_05_04.png",
         ],
       },
       // KISTI (23.05 ~ 23.11)
@@ -94,7 +94,7 @@ export const projectList: ProjectDTO[] = [
         repositoryUrl: "",
         liveDemoUrl:
           "https://vlabon.re.kr/contents/3c233aedb486b17b84d3f85bf44303c6",
-        thumbnail: "/src/assets/images/projects/project_04_01.png",
+        thumbnail: "/public/assets/images/projects/project_04_01.png",
         screenshots: [],
       },
       // DIGITAL TWIN (23.02 ~ 23.05)
@@ -124,7 +124,7 @@ export const projectList: ProjectDTO[] = [
         achievements: [""],
         repositoryUrl: "",
         liveDemoUrl: "",
-        thumbnail: "/src/assets/images/projects/project_04_01.png",
+        thumbnail: "/public/assets/images/projects/project_04_01.png",
         screenshots: [],
       },
       // AWS Serverless (22.12 ~ 23.02)
@@ -157,7 +157,7 @@ export const projectList: ProjectDTO[] = [
         achievements: [""],
         repositoryUrl: "",
         liveDemoUrl: "",
-        thumbnail: "/src/assets/images/projects/project_04_01.png",
+        thumbnail: "/public/assets/images/projects/project_04_01.png",
         screenshots: [],
       },
     ],
@@ -202,7 +202,7 @@ export const projectList: ProjectDTO[] = [
         liveDemoUrl: "https://ohjanghoon.github.io/",
         thumbnail: "",
         screenshots: [
-          "/src/assets/images/projects/educational/educational_project_02_01.png",
+          "/public/assets/images/projects/educational/educational_project_02_01.png",
         ],
       },
       // 주신사 프로젝트 (22.06 ~ 22.07)
@@ -234,7 +234,7 @@ export const projectList: ProjectDTO[] = [
         liveDemoUrl: "https://ohjanghoon.github.io/",
         thumbnail: "",
         screenshots: [
-          "/src/assets/images/projects/educational/educational_project_02_01.png",
+          "/public/assets/images/projects/educational/educational_project_02_01.png",
         ],
       },
       // HTML/CSS/JS 기초 프로젝트 (22.06 ~ 22.06)
@@ -268,10 +268,10 @@ export const projectList: ProjectDTO[] = [
         liveDemoUrl: "https://ohjanghoon.github.io/",
         thumbnail: "",
         screenshots: [
-          "/src/assets/images/projects/educational/educational_project_01_01.png",
-          "/src/assets/images/projects/educational/educational_project_01_02.png",
-          "/src/assets/images/projects/educational/educational_project_01_03.png",
-          "/src/assets/images/projects/educational/educational_project_01_04.png",
+          "/public/assets/images/projects/educational/educational_project_01_01.png",
+          "/public/assets/images/projects/educational/educational_project_01_02.png",
+          "/public/assets/images/projects/educational/educational_project_01_03.png",
+          "/public/assets/images/projects/educational/educational_project_01_04.png",
         ],
       },
     ],

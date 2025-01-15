@@ -26,7 +26,7 @@ export const fadeIn = (direction: string, delay: number) => {
 };
 
 export const dotVariant = {
-  animate: (i: number) => ({
+  animate: () => ({
     y: ["-10vh", "80vh"], // 위에서 아래로 떨어짐
     x: ["10vw", "-10vw"], // 좌측에서 우측으로 사선 이동
     opacity: [0, 1, 0], // 페이드 인-아웃 효과
