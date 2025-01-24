@@ -31,12 +31,12 @@ function ProjectCard({ data: item, handleDialog, handleSetData }: CardProps) {
         },
       }}
       key={item.id}
-      className="card group relative flex min-h-[290px] w-full cursor-pointer flex-col rounded-lg p-5 shadow-lg ring-[0.3px] ring-zinc-700/20"
+      className="card group flex min-h-[290px] w-full cursor-pointer flex-col rounded-lg p-5 shadow-lg ring-[0.3px] ring-zinc-700/20"
       onClick={openDialog}
     >
       <span className="border-anim absolute inset-0 rounded-lg"></span>
 
-      <Icon className="text-5xl text-accent-hover" />
+      <Icon className="text-5xl text-accent-hover/80 group-hover:text-accent-hover group-hover:transition-all group-hover:duration-[0.4s]" />
 
       {/* 이미지 영역 */}
       {/* <img

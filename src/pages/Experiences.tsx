@@ -26,7 +26,6 @@ function Experiences() {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.2 }}
-          className="my-8 text-center md:mx-20"
         >
           <Title
             title="Experiences"
