@@ -37,6 +37,9 @@ header {
 .h5 {
   @apply text-[18px] font-semibold leading-[1.1] xl:text-[22px];
 }
+.h6 {
+  @apply text-[16px] font-semibold leading-[1.1] xl:text-[17px];
+}
 
 /* ------------------------------- *\
  * TYPOGRAPHY
@@ -164,11 +167,12 @@ header {
 }
 
 .swiper {
-  padding-bottom: 35px; /* 하단 공간 확보 */
+  /* padding-bottom: 35px; 하단 공간 확보 */
   overflow-y: visible !important; /* 부모 요소의 overflow 속성 수정 */
 }
 
 .swiper-pagination {
+  @apply bottom-0 md:bottom-2 !important;
 }
 
 .customPagination .swiper-pagination-bullet {
@@ -234,7 +238,7 @@ header {
 }
 
 .card {
-  @apply shadow-lg ring-[0.3px] ring-zinc-700/20;
+  @apply relative shadow-lg ring-[0.3px] ring-zinc-700/20;
 }
 .card:hover .border-anim {
   animation: border-rotate 0.3s linear forwards;
