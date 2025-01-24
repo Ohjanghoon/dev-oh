@@ -7,6 +7,7 @@ import { useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 import DetailDialog from "../components/DetailDiaglog";
 import Title from "../components/layouts/Title";
+import Learning from "../components/Learning";
 
 // utils
 import { fadeIn } from "../utils/variants";
@@ -23,8 +24,20 @@ const Projects = () => {
     null,
   );
 
-  // 모든 프로젝트를 하나의 배열로 병합(#All 태그를 활용하기 위함.)
-  const allProjects = projectList.flatMap((project) => project.items);
+  // 모든 프로젝트를 하나의 배열로 병합 후 날짜 내림차순 정렬(#All 태그를 활용하기 위함.)
+  const allProjects = projectList
+    .flatMap((project) => project.items)
+    .sort((a, b) => {
+      const dateA = new Date(a.duration.start.replace(".", "-")).getTime();
+      const dateB = new Date(b.duration.start.replace(".", "-")).getTime();
+
+      if (dateA == dateB) {
+        const dateAend = new Date(a.duration.end.replace(".", "-")).getTime();
+        const dateBend = new Date(b.duration.end.replace(".", "-")).getTime();
+        return dateBend - dateAend;
+      }
+      return dateB - dateA;
+    });
 
   return (
     <section className="container">
@@ -41,7 +54,6 @@ const Projects = () => {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.2 }}
-          className="my-8 text-center md:mx-20"
         >
           <Title
             title="Projects"
@@ -54,8 +66,7 @@ const Projects = () => {
           variants={fadeIn("right", 0.6)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.2 }}
-          className="pt-5"
+          viewport={{ once: false, amount: 0.1 }}
         >
           <TabGroup className="p-1 md:mx-20">
             <TabList className="grid grid-cols-2 place-items-center gap-5 px-10 md:grid-cols-[repeat(4,_minmax(100px,_1fr))]">
@@ -105,6 +116,16 @@ const Projects = () => {
               ))}
             </TabPanels>
           </TabGroup>
+        </motion.div>
+        <motion.div
+          variants={fadeIn("right", 0.6)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.1 }}
+          className="my-20 text-center md:mx-20"
+        >
+          <Title title="learnings" description="" />
+          <Learning />
         </motion.div>
         {openDialog && selectedProject !== null && (
           <DetailDialog
