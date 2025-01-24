@@ -53,7 +53,7 @@ const Projects = () => {
           variants={fadeIn("right", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <Title
             title="Projects"
@@ -66,7 +66,7 @@ const Projects = () => {
           variants={fadeIn("right", 0.6)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           <TabGroup className="p-1 md:mx-20">
             <TabList className="grid grid-cols-2 place-items-center gap-5 px-10 md:grid-cols-[repeat(4,_minmax(100px,_1fr))]">
@@ -121,8 +121,8 @@ const Projects = () => {
           variants={fadeIn("right", 0.6)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.1 }}
-          className="my-20 text-center md:mx-20"
+          viewport={{ once: true, amount: 0.1 }}
+          className="mt-20"
         >
           <Title title="learnings" description="" />
           <Learning />

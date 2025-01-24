@@ -6,7 +6,7 @@ import { studyList } from "../data/projectData";
 
 function Learning() {
   return (
-    <div className="flex w-full flex-col flex-wrap gap-5 p-1 text-xs md:flex-row md:px-20">
+    <div className="flex w-full flex-col flex-wrap gap-5 p-1 text-xs md:flex-row md:px-52">
       {studyList.map((item) => {
         const Icon = item.icon;
         return (

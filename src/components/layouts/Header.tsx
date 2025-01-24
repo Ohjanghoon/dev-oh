@@ -33,7 +33,7 @@ function Header() {
               {navOpen ? "close" : "menu"}
             </span>
           </button>
-          <Navbar navOpen={navOpen} />
+          <Navbar navOpen={navOpen} handleSetNavOpen={setNavOpen} />
         </div>
 
         {/* Contact 영역 */}

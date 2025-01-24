@@ -25,7 +25,7 @@ function About() {
           variants={fadeIn("right", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <Title
             title="About Me"
@@ -36,7 +36,7 @@ function About() {
           variants={fadeIn("right", 0.6)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="my-8 grid min-h-[50vh] gap-6 p-3 text-center md:mx-20"
         >
           <div className="grid gap-6 md:grid-cols-2">

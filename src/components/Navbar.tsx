@@ -10,9 +10,10 @@ interface NavItem {
 
 interface NavbarOpenProps {
   navOpen: boolean;
+  handleSetNavOpen: (isOpen: boolean) => void;
 }
 
-function Navbar({ navOpen }: NavbarOpenProps) {
+function Navbar({ navOpen, handleSetNavOpen }: NavbarOpenProps) {
   const [activeLink, setActiveLink] = useState("");
   const lastActiveLink = useRef<HTMLElement | null>(null);
   const activeBox = useRef<HTMLDivElement | null>(null);
@@ -55,6 +56,8 @@ function Navbar({ navOpen }: NavbarOpenProps) {
       activeBox.current.style.width = event.currentTarget.offsetWidth + "px";
       activeBox.current.style.height = event.currentTarget.offsetHeight + "px";
     }
+
+    handleSetNavOpen(false);
   };
 
   const navItems: NavItem[] = [
