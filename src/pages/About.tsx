@@ -26,7 +26,6 @@ function About() {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.2 }}
-          className="my-8 text-center md:mx-20"
         >
           <Title
             title="About Me"
@@ -48,7 +47,7 @@ function About() {
                 <div
                   key={index}
                   onClick={() => setIsVisibleIndex(isClicked ? null : index)}
-                  className="relative flex cursor-pointer flex-col gap-3 overflow-hidden rounded-xl p-3 shadow-neumorphism"
+                  className="relative flex min-h-[250px] cursor-pointer flex-col gap-3 overflow-hidden rounded-xl p-3 shadow-neumorphism"
                 >
                   <motion.div
                     initial={{ top: 0, opacity: 1 }}
@@ -77,7 +76,7 @@ function About() {
                   </div>
                   <div className="flex">
                     <img
-                      src="/public/assets/dev-oh avatar.png"
+                      src="/assets/dev-oh avatar.png"
                       alt="dev-oh portrait"
                       className="h-[40px] w-[40px] rounded-full"
                     />
@@ -106,7 +105,7 @@ function About() {
                 기록을 남기고 있습니다.
               </p>
               <img
-                src="src/public/assets/notion-avatar-right.png"
+                src="src/assets/notion-avatar-right.png"
                 alt="dev-oh portrait"
                 className="h-[50px] w-[50px] rounded-xl"
               />

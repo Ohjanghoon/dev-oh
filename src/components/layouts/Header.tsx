@@ -14,7 +14,7 @@ function Header() {
         <h1>
           <a href="/" className="logo flex items-center justify-center gap-3">
             <img
-              src="/public/assets/logo_dev-oh.png"
+              src="/assets/logo_dev-oh.png"
               width={36}
               height={36}
               alt="dev-oh logo"

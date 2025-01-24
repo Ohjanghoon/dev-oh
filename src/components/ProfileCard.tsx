@@ -3,7 +3,7 @@ const ProfileCard = () => {
     <div className="flex w-[17rem] flex-col items-center justify-center rounded-3xl bg-white/50 p-10 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] lg:h-[32rem] lg:w-[22rem] lg:rotate-2">
       <div className="rounded-3xl pt-6 md:pt-10">
         <img
-          src="/public/assets/dev-oh profile.png"
+          src="/assets/dev-oh profile.png"
           alt="Ohjanghoon"
           className="h-52 w-full lg:h-72"
         />
