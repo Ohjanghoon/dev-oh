@@ -37,7 +37,7 @@ function Hero() {
 
               {/* Home 설명__슬로건 영역 */}
               <div className="mt-4">
-                <h1 className="h1 break-keep font-mono">
+                <h1 className="h1 break-keep font-extrabold">
                   Hello I'm <br />
                   <p className="mt-3 text-accent-hover">JangHoon Oh</p>
                 </h1>

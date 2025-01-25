@@ -73,21 +73,3 @@ const ProfileCard = () => {
 };
 
 export default ProfileCard;
-
-// {/* 이름 */}
-<h2 className="my-2 hidden text-xl font-semibold text-gray-800 lg:block">
-  오장훈
-</h2>;
-{
-  /* 직책 */
-}
-<p className="hidden text-sm text-gray-600 lg:block">Frontend Developer</p>;
-{
-  /* 추가 정보 */
-}
-<div className="mt-4 w-full rounded-lg bg-gray-50 p-4 text-center text-sm text-gray-500">
-  <p>
-    <span className="hidden lg:inline">E-mail:</span>
-    <span className="tracking-wider">ojh9502@gmail.com</span>
-  </p>
-</div>;
