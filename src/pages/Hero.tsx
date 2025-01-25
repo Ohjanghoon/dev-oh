@@ -37,7 +37,7 @@ function Hero() {
 
               {/* Home 설명__슬로건 영역 */}
               <div className="mt-4">
-                <h1 className="h1 break-keep font-mono">
+                <h1 className="h1 break-keep font-extrabold">
                   Hello I'm <br />
                   <p className="mt-3 text-accent-hover">JangHoon Oh</p>
                 </h1>
@@ -69,7 +69,7 @@ function Hero() {
               viewport={{ once: false, amount: 0.2 }}
               whileHover={{
                 scale: 1.05, // 카드 크기를 1.05배로 증가
-                rotate: -2, // 약간 회전시켜서 바운스 효과를 강조
+                // rotate: -2, // 약간 회전시켜서 바운스 효과를 강조
                 transition: { type: "spring", stiffness: 200, damping: 10 }, // 바운스 효과
               }}
               className="z-10 order-1 md:order-2"

@@ -12,7 +12,7 @@
 }
 
 body {
-  @apply bg-background-light font-mono text-base leading-loose tracking-tight text-gray-700;
+  @apply bg-background-light font-jetbrains text-base leading-loose tracking-tight text-gray-700;
 }
 header {
   @apply fixed left-0 top-0 z-40 flex h-24 w-full items-center;
@@ -23,7 +23,7 @@ header {
 }
 
 .h1 {
-  @apply text-[44px] font-semibold leading-[1.1] xl:text-[60px];
+  @apply text-[44px] font-extrabold leading-[1.1] xl:text-[60px];
 }
 .h2 {
   @apply text-[40px] font-semibold leading-[1.1] xl:text-[48px];
@@ -110,10 +110,10 @@ header {
 }
 
 .neumorphism-btn:hover {
-  @apply shadow-neumorphism-hover transition-all duration-500;
+  @apply shadow-neumorphism-pressed transition-all duration-500;
 }
 .neumorphism-btn:active {
-  @apply bg-accent-hover/5 shadow-neumorphism-pressed outline-none transition-all duration-500;
+  @apply bg-accent-hover/10 shadow-neumorphism-pressed outline-none transition-all duration-500;
 }
 
 @keyframes gradientAnimation {
@@ -242,4 +242,28 @@ header {
 }
 .card:hover .border-anim {
   animation: border-rotate 0.3s linear forwards;
+}
+
+.layers {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.flip {
+  @apply relative h-[25rem] w-[17rem] overflow-hidden rounded-3xl shadow-[4.0px_8.0px_8.0px_rgba(255,255,255,0.38)] backdrop-blur-md backdrop-filter duration-500 [box-shadow:12px_12px_0px_0px_#0d0d0d] [transform:rotate3d(1_,-3,_1,_5deg)] hover:-rotate-0 hover:shadow-none lg:h-[32rem] lg:w-[22rem];
+  backface-visibility: hidden;
+}
+
+.flip_front,
+.flip_back {
+  @apply rounded-3xl border border-neutral-600 bg-white/50 p-10;
+  position: absolute;
+  left: 0;
+  top: 0;
+  backface-visibility: hidden;
 }

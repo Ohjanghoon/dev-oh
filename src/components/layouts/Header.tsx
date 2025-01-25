@@ -19,7 +19,7 @@ function Header() {
               height={36}
               alt="dev-oh logo"
             />
-            <h1 className="font-jetbrains text-2xl font-semibold">dev-oh</h1>
+            <h1 className="h4">dev-oh</h1>
           </a>
         </h1>
 
