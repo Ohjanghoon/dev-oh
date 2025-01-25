@@ -243,3 +243,25 @@ header {
 .card:hover .border-anim {
   animation: border-rotate 0.3s linear forwards;
 }
+
+.layers {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.flip {
+  @apply relative flex h-[25rem] w-[17rem] flex-col items-center justify-center overflow-hidden rounded-3xl border border-neutral-600 bg-white/50 p-10 shadow-[4.0px_8.0px_8.0px_rgba(255,255,255,0.38)] backdrop-blur-md backdrop-filter duration-500 [box-shadow:12px_12px_0px_0px_#0d0d0d] [transform:rotate3d(1_,-1,_1,_5deg)] hover:-rotate-0 hover:shadow-lg lg:h-[32rem] lg:w-[22rem];
+}
+
+.flip_front,
+.flip_back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  backface-visibility: hidden;
+}
