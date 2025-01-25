@@ -110,10 +110,10 @@ header {
 }
 
 .neumorphism-btn:hover {
-  @apply shadow-neumorphism-hover transition-all duration-500;
+  @apply shadow-neumorphism-pressed transition-all duration-500;
 }
 .neumorphism-btn:active {
-  @apply bg-accent-hover/5 shadow-neumorphism-pressed outline-none transition-all duration-500;
+  @apply bg-accent-hover/10 shadow-neumorphism-pressed outline-none transition-all duration-500;
 }
 
 @keyframes gradientAnimation {
