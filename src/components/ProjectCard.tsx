@@ -14,6 +14,7 @@ function ProjectCard({ data: item, handleDialog, handleSetData }: CardProps) {
   const openDialog = () => {
     handleDialog(true);
     handleSetData(item);
+    document.body.style.overflow = "hidden";
   };
 
   const Icon = item.icon;

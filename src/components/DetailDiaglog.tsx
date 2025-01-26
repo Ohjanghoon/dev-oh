@@ -31,6 +31,7 @@ interface Props {
 function DetailDialog({ data: item, handleOpenDialog }: Props) {
   const onClose = () => {
     handleOpenDialog(false);
+    document.body.style.overflow = "auto";
   };
 
   return (
