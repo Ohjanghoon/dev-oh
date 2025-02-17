@@ -8,7 +8,7 @@ function Education() {
         const Icon = education.icon;
         return (
           <div
-            className="relative flex w-full justify-center rounded-3xl shadow-lg ring-[0.3px] ring-zinc-700/20 md:justify-start"
+            className="neumorphism-card relative flex w-full justify-center rounded-3xl md:justify-start"
             key={education.name}
           >
             {/* 도트 포인트 */}
@@ -20,10 +20,10 @@ function Education() {
               <h3 className="rounded-2xl bg-accent-500 p-3 align-middle text-3xl text-zinc-100 sm:mb-1 sm:text-2xl">
                 <Icon />
               </h3>
-              <span className="text-text-secondary font-semibold sm:text-lg">
+              <span className="text-light-text-secondary font-semibold sm:text-lg">
                 {education.duration}
               </span>
-              <h3 className="sm:text-lg">{education.name}</h3>
+              <p className="font-semibold sm:text-lg">{education.name}</p>
             </div>
           </div>
         );

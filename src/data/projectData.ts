@@ -439,7 +439,7 @@ export const projectList: ProjectDTO[] = [
           available: false,
           url: "",
           expression:
-            "해당 프로젝트는 비공개 프로젝트로, 사내 보안 정책에 따라 이미지와 Demo를 제공할 수 없는 점 양해 부탁드립니다.",
+            "해당 프로젝트는 사내 보안 정책에 따라 이미지와 Demo를 제공할 수 없는 점 양해 부탁드립니다.",
         },
         thumbnail: "project_04_01.png",
         screenshots: [],
@@ -506,7 +506,7 @@ export const projectList: ProjectDTO[] = [
           available: false,
           url: "",
           expression:
-            "해당 프로젝트는 비공개 프로젝트로, 사내 보안 정책에 따라 이미지와 Demo를 제공할 수 없는 점 양해 부탁드립니다.",
+            "해당 프로젝트는 사내 보안 정책에 따라 이미지와 Demo를 제공할 수 없는 점 양해 부탁드립니다.",
         },
         thumbnail: "",
         screenshots: [],

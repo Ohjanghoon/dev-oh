@@ -16,12 +16,12 @@ const ProfileCard = () => {
     { title: "E-mail", content: "ojh4105@naver.com" },
   ];
   return (
-    <div className="flip">
+    <div className="flip-card">
       <motion.div
         initial={{ rotateY: 0 }}
         animate={{ rotateY: flip ? 180 : 0 }}
         transition={{ duration: 0.7 }}
-        className="flip_front flex h-full w-full flex-col items-center justify-center gap-6 rounded-3xl"
+        className="flip-card-front flex h-full w-full flex-col items-center justify-center gap-6 rounded-3xl"
       >
         <div>
           <img
@@ -30,11 +30,11 @@ const ProfileCard = () => {
             className="h-52 w-full lg:h-72"
           />
         </div>
-        <p className="text-sm font-semibold text-text-secondary underline underline-offset-2">
+        <p className="text-light-text-secondary text-sm font-semibold underline underline-offset-2">
           Frontend Developer
         </p>
         <span
-          className="cursor-pointer rounded-full px-4 py-1 text-accent-hover ring-1 ring-accent-hover hover:bg-accent-hover hover:text-text-light"
+          className="hover:text-light-text-light cursor-pointer rounded-full px-4 py-1 text-accent-hover ring-1 ring-accent-hover hover:bg-accent-hover"
           onClick={() => setFlip((prev) => !prev)}
         >
           More Info
@@ -44,7 +44,7 @@ const ProfileCard = () => {
         initial={{ rotateY: 180 }}
         animate={{ rotateY: flip ? 360 : 180 }}
         transition={{ duration: 0.7 }}
-        className="flip_back flex h-full w-full flex-col items-center justify-center gap-6 bg-white/50"
+        className="flip-card-back flex h-full w-full flex-col items-center justify-center gap-6 bg-white/50"
       >
         <table className="text-sm md:text-lg">
           <tbody>
@@ -62,7 +62,7 @@ const ProfileCard = () => {
         </table>
 
         <span
-          className="cursor-pointer rounded-full bg-accent-hover px-6 py-2 text-text-light"
+          className="text-light-text-light cursor-pointer rounded-full bg-accent-hover px-6 py-2"
           onClick={() => setFlip((prev) => !prev)}
         >
           <BsPhoneFlip className="text-2xl" />

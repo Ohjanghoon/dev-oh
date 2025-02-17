@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 import { dotVariant } from "../utils/variants";
 
 const GalaxyDiagonalBackground = () => {
-  const dots = Array.from({ length: 30 }); // 50개의 도트 생성
+  const dots = Array.from({ length: 10 }); // 50개의 도트 생성
 
   return (
     <div className="absolute inset-0 overflow-hidden bg-transparent">
       {dots.map((_, i) => (
         <motion.div
           key={i}
-          className="absolute h-2 w-2 rounded-full bg-accent-hover/10"
+          className="absolute h-2 w-2 rounded-full bg-white/70 dark:bg-yellow-300/20"
           variants={dotVariant}
           custom={i}
           animate="animate"

@@ -5,6 +5,10 @@ import { useState } from "react";
 import Navbar from "../Navbar";
 import ThemeControl from "../ThemeControl";
 
+// icons
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
+
 function Header() {
   const [navOpen, setNavOpen] = useState(false);
 
@@ -28,12 +32,10 @@ function Header() {
         <div className="flex items-center gap-3 md:grid md:w-full md:grid-cols-[3fr,1fr]">
           <div className="relative order-3 rounded-xl md:order-2 md:justify-self-center">
             <button
-              className="menu-btn neumorphism-btn md:hidden"
+              className="neumorphism-btn grid h-10 w-10 place-items-center rounded-xl md:hidden"
               onClick={() => setNavOpen((prev) => !prev)}
             >
-              <span className="material-symbols-rounded">
-                {navOpen ? "close" : "menu"}
-              </span>
+              <span>{navOpen ? <IoMdClose /> : <GiHamburgerMenu />}</span>
             </button>
             <Navbar navOpen={navOpen} handleSetNavOpen={setNavOpen} />
           </div>

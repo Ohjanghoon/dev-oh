@@ -3,79 +3,77 @@
 @tailwind utilities;
 
 /* ------------------------------- *\
- * BASE
+ * base
 \* ------------------------------- */
 @layer base {
-  html {
-    scroll-behavior: smooth;
+  * {
+    @apply select-none scroll-my-4 focus-visible:outline-none;
+  }
+  body {
+    @apply bg-primary text-primary font-jetbrains text-base leading-loose tracking-tight transition-colors duration-300 ease-out;
+  }
+  header {
+    @apply fixed left-0 top-0 z-40 flex h-24 w-full items-center;
+  }
+
+  h1 {
+    @apply text-[44px] font-extrabold leading-[1.1] xl:text-[60px];
+  }
+  h2 {
+    @apply text-[40px] font-semibold leading-[1.1] xl:text-[48px];
+  }
+  h3 {
+    @apply text-[30px] font-semibold leading-[1.1] xl:text-[36px];
+  }
+  h4 {
+    @apply text-[24px] font-semibold leading-[1.1] xl:text-[28px];
+  }
+  h5 {
+    @apply text-[18px] font-semibold leading-[1.1] xl:text-[22px];
+  }
+  h6 {
+    @apply text-[16px] font-semibold leading-[1.1] xl:text-[17px];
   }
 }
 
-body {
-  @apply bg-background-light font-jetbrains text-base leading-loose tracking-tight text-gray-700;
-}
-header {
-  @apply fixed left-0 top-0 z-40 flex h-24 w-full items-center;
+/* ------------------------------- *\
+ * components
+\* ------------------------------- */
+@layer components {
+  .container {
+    @apply mx-auto min-h-screen py-24;
+  }
+  .bg-primary {
+    @apply bg-light-primary dark:bg-dark-primary;
+  }
+  .bg-surface {
+    @apply bg-light-surface dark:bg-dark-surface;
+  }
+  .bg-gradient {
+    @apply from-light-primary to-light-gradient dark:from-dark-primary dark:to-dark-gradient h-full w-full bg-gradient-to-br;
+  }
+
+  .text-primary {
+    @apply text-light-text dark:text-dark-text;
+  }
+
+  .shadow-neumorphism {
+    @apply shadow-light-neumorphism dark:shadow-dark-neumorphism;
+  }
+  .shadow-neumorphism-pressed {
+    @apply shadow-light-neumorphism-pressed dark:shadow-dark-neumorphism-pressed;
+  }
 }
 
-.container {
-  @apply mx-auto min-h-screen py-24;
-}
-
-.h1 {
-  @apply text-[44px] font-extrabold leading-[1.1] xl:text-[60px];
-}
-.h2 {
-  @apply text-[40px] font-semibold leading-[1.1] xl:text-[48px];
-}
-.h3 {
-  @apply text-[30px] font-semibold leading-[1.1] xl:text-[36px];
-}
-.h4 {
-  @apply text-[24px] font-semibold leading-[1.1] xl:text-[28px];
-}
-.h5 {
-  @apply text-[18px] font-semibold leading-[1.1] xl:text-[22px];
-}
-.h6 {
-  @apply text-[16px] font-semibold leading-[1.1] xl:text-[17px];
+@layer utilities {
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
 }
 
 /* ------------------------------- *\
- * TYPOGRAPHY
+ * navbar
 \* ------------------------------- */
-/* .headline {
-  @apply max-w-max;
-  background: -webkit-linear-gradient(0deg, #000000, #8a8a8a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.headline-1 {
-  @apply text-3xl font-semibold leading-tight;
-} */
-
-/* ------------------------------- *\
- * UTILITIES
-\* ------------------------------- */
-.material-symbols-rounded {
-  @apply h-[1em] w-[1em] overflow-hidden;
-  font-variation-settings:
-    "FILL" 0,
-    "wght" 400,
-    "GRAD" 0,
-    "opsz" 24;
-}
-
-/* ------------------------------- *\
- * COMPONENTS
-\* ------------------------------- */
-
-/* Menu btn */
-.menu-btn {
-  @apply grid h-10 w-10 place-items-center rounded-xl bg-zinc-50/10 ring-1 ring-inset ring-zinc-50/[0.02] backdrop-blur-2xl transition-[transform,shadow] hover:bg-zinc-50/15 active:scale-95;
-}
-
-/* Navbar */
 .navbar {
   @apply invisible absolute right-0 top-full isolate mt-2 min-w-40 scale-90 rounded-2xl bg-gray-500/10 p-2 opacity-0 ring-1 ring-inset ring-zinc-50/5 blur-sm backdrop-blur-2xl transition-[opacity,transform,filter] md:visible md:static md:mt-0 md:flex md:scale-100 md:items-center md:opacity-100 md:blur-0;
 }
@@ -85,7 +83,7 @@ header {
 }
 
 .nav-link {
-  @apply grid h-9 items-center px-4 text-sm font-medium tracking-wide text-gray-500 transition-colors hover:text-zinc-900;
+  @apply hover:text-light-text-dark hover:dark:text-dark-text grid h-9 items-center px-4 text-sm font-medium tracking-wide text-gray-500 transition-colors;
 }
 
 .nav-link.active {
@@ -96,48 +94,53 @@ header {
   @apply absolute -z-10 rounded-lg bg-zinc-100 transition-[top,left] duration-500;
 }
 
-/* Button */
-.btn {
+/* ------------------------------- *\
+ * button
+\* ------------------------------- */
+/* .btn {
   @apply flex h-9 max-w-max items-center gap-2 rounded-xl px-4 text-sm font-medium ring-1 ring-inset ring-zinc-50/5 transition-[background-color];
 }
 
 .btn-secondary {
   @apply bg-[#0000C5] text-zinc-50 active:bg-accent/80;
-}
+} */
 
 .neumorphism-btn {
-  @apply bg-gray-200 text-gray-700 shadow-neumorphism;
+  @apply shadow-neumorphism;
 }
-
 .neumorphism-btn:hover {
   @apply shadow-neumorphism-pressed transition-all duration-500;
 }
-.neumorphism-btn:active {
-  @apply bg-accent-hover/10 shadow-neumorphism-pressed outline-none transition-all duration-500;
+.neumorphism-btn-selected {
+  @apply data-[selected]:shadow-light-neumorphism-pressed data-[selected]:dark:shadow-dark-neumorphism-pressed data-[selected]:text-accent-hover/80;
 }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+/* ------------------------------- *\
+ * card
+\* ------------------------------- */
+.neumorphism-card {
+  @apply shadow-lg ring-[0.3px] ring-zinc-700/20 dark:ring-zinc-400/20;
 }
 
-.animated-gradient {
-  background: linear-gradient(90deg, #e5e7eb, #9badcd);
-  background-size: 300% 300%;
-  /* animation: gradientAnimation 3s ease-out infinite; */
+.border-anim-card {
+  @apply relative cursor-pointer rounded-lg;
+}
+.border-anim-card:hover .border-anim {
+  animation: border-rotate 0.3s linear forwards;
 }
 
-.stack-icon {
-  @apply h-[50px] w-[50px];
+.flip-card {
+  @apply backface-hidden relative h-[25rem] w-[17rem] overflow-hidden rounded-3xl shadow-[4.0px_8.0px_8.0px_rgba(255,255,255,0.38)] backdrop-blur-md backdrop-filter transition-[background-color,transform,rotate3d] duration-1000 [box-shadow:12px_12px_0px_0px_#0d0d0d] [transform:rotate3d(1_,-3,_1,_5deg)] hover:-rotate-0 hover:shadow-none lg:h-[32rem] lg:w-[22rem];
 }
 
+.flip-card-front,
+.flip-card-back {
+  @apply backface-hidden absolute left-0 top-0 rounded-3xl border border-neutral-600 bg-white/50 p-10 transition-[background-color] duration-500 ease-in-out dark:bg-black/40;
+}
+
+/* ------------------------------- *\
+ * swiper
+\* ------------------------------- */
 .swiper {
   width: 100%;
 
@@ -175,14 +178,26 @@ header {
   @apply bottom-0 md:bottom-2 !important;
 }
 
-.customPagination .swiper-pagination-bullet {
-  background: #444;
+.swiper-pagination-bullet {
+  @apply bg-white;
 }
 
 .swiper-pagination-bullet-active {
   @apply bg-accent-hover;
 }
 
+/* ------------------------------- *\
+ * border
+\* ------------------------------- */
+.border-anim {
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  background-color: transparent;
+  border-radius: 0.5rem; /* Tailwind rounded-lg와 매칭 */
+  animation: none;
+  pointer-events: none; /* 클릭 이벤트 방지 */
+}
 @keyframes border-rotate {
   0% {
     width: 0;
@@ -225,45 +240,4 @@ header {
     border-bottom-color: #2438e5; /* 파란색 */
     border-left-color: #2438e5; /* 파란색 */
   }
-}
-
-.border-anim {
-  position: absolute;
-  inset: 0;
-  border: 2px solid transparent;
-  background-color: transparent;
-  border-radius: 0.5rem; /* Tailwind rounded-lg와 매칭 */
-  animation: none;
-  pointer-events: none; /* 클릭 이벤트 방지 */
-}
-
-.card {
-  @apply relative shadow-lg ring-[0.3px] ring-zinc-700/20;
-}
-.card:hover .border-anim {
-  animation: border-rotate 0.3s linear forwards;
-}
-
-.layers {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  z-index: -1;
-}
-
-.flip {
-  @apply relative h-[25rem] w-[17rem] overflow-hidden rounded-3xl shadow-[4.0px_8.0px_8.0px_rgba(255,255,255,0.38)] backdrop-blur-md backdrop-filter duration-500 [box-shadow:12px_12px_0px_0px_#0d0d0d] [transform:rotate3d(1_,-3,_1,_5deg)] hover:-rotate-0 hover:shadow-none lg:h-[32rem] lg:w-[22rem];
-  backface-visibility: hidden;
-}
-
-.flip_front,
-.flip_back {
-  @apply rounded-3xl border border-neutral-600 bg-white/50 p-10;
-  position: absolute;
-  left: 0;
-  top: 0;
-  backface-visibility: hidden;
 }

@@ -27,10 +27,10 @@ function Learning() {
               <Icon className="text-3xl" />
               <div className="text-start">
                 <p className="text-[15px] font-semibold">{item.title}</p>
-                <p className="mt-1 text-text-secondary">
+                <p className="text-light-text-secondary mt-1">
                   {item.duration.start} ~ {item.duration.end}
                 </p>
-                <span className="mt-2 inline-block rounded border-[1px] border-gray-800 p-1">
+                <span className="mt-2 inline-block rounded border-[1px] border-gray-400 p-1">
                   {item.reference}
                 </span>
               </div>
