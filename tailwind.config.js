@@ -20,12 +20,20 @@ export default {
         jetbrains: ["'jetBrains Mono'", "sans-serif"],
       },
       colors: {
-        background: {
-          light: "#e5e7eb",
-          dark: "#1c1c22",
+        light: {
+          background: "#e5e7eb",
+          text: {
+            DEFAULT: "#0b0c0e",
+            secondary: "#373d48",
+          },
         },
+
+        dark: {
+          background: "#1c1c22",
+        },
+
         text: {
-          DEFAULT: "#374151",
+          DEFAULT: "var(--text-gray-700)",
           secondary: "#6b7280",
           light: "#e5e7eb",
         },
@@ -52,18 +60,25 @@ export default {
         "text-hover": "#F5F5FF",
       },
       boxShadow: {
-        neumorphism: "6px 6px 16px #a3a3a3, -6px -6px 16px #ffffff",
-        "neumorphism-hover": "4px 4px 10px #a3a3a3, -4px -4px 10px #ffffff",
-        "neumorphism-pressed":
-          "inset 4px 4px 8px #a3a3a3, inset -3px -3px 8px #ffffff",
+        "light-neumorphism": "6px 6px 20px #a0a2a5, -6px -6px 20px #ffffff",
 
-        "neumorphism-blue": "2px 2px 10px #0000C5, -2px -2px 10px #a5b2ff",
-        "neumorphism-blue-hover":
-          "4px 4px 10px #000080, -4px -4px 10px #4D4DFF",
-        "neumorphism-blue-pressed":
-          "inset 4px 4px 10px #000080, inset -4px -4px 10px #4D4DFF",
+        "dark-neumorphism": "8px 8px 8px #141418, -8px -8px 8px #24242c;",
+        "dark-neumorphism-pressed":
+          "inset 8px 8px 8px #141418, inset -8px -8px 8px #24242c;",
+
+        // neumorphism: "6px 6px 16px #a3a3a3, -6px -6px 16px #ffffff",
+        // "neumorphism-hover": "4px 4px 10px #a3a3a3, -4px -4px 10px #ffffff",
+        // "neumorphism-pressed":
+        //   "inset 4px 4px 8px #a3a3a3, inset -3px -3px 8px #ffffff",
+
+        // "neumorphism-blue": "2px 2px 10px #0000C5, -2px -2px 10px #a5b2ff",
+        // "neumorphism-blue-hover":
+        //   "4px 4px 10px #000080, -4px -4px 10px #4D4DFF",
+        // "neumorphism-blue-pressed":
+        //   "inset 4px 4px 10px #000080, inset -4px -4px 10px #4D4DFF",
       },
     },
   },
   plugins: [tailwindScrollbar],
+  darkMode: "class",
 };
