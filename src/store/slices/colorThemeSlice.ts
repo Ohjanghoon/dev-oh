@@ -16,12 +16,12 @@ const colorThemeSlice = createSlice({
     lightMode: (state) => {
       state.theme = "light";
       document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", JSON.stringify(state.theme));
+      localStorage.setItem("theme", "light");
     },
     darkMode: (state) => {
       state.theme = "dark";
       document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", JSON.stringify(state.theme));
+      localStorage.setItem("theme", "dark");
     },
   },
 });
