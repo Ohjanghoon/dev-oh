@@ -1,15 +1,20 @@
 // node Modules
-import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 // components
 import App from "./App.tsx";
 
+// redux
+import { Provider } from "react-redux";
+import store from "./store/store.tsx";
+
 // styles
 import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+  <>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </>,
 );

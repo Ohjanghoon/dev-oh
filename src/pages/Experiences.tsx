@@ -46,7 +46,7 @@ function Experiences() {
                 return (
                   <Tab
                     key={index}
-                    className="neumorphism-btn my-3 rounded-xl p-3 data-[selected]:text-accent-hover/70 data-[selected]:shadow-neumorphism-pressed focus:outline-none"
+                    className="neumorphism-btn neumorphism-btn-selected my-3 rounded-xl p-3 focus:outline-none"
                   >
                     <div className="flex items-center justify-center gap-2">
                       <Icon />

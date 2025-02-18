@@ -27,18 +27,12 @@ function Skill() {
                     <li key={index}>
                       <TooltipProvider delayDuration={50} key={index}>
                         <Tooltip>
-                          <TooltipTrigger className="group flex cursor-default items-center justify-center rounded-xl bg-gray-200 p-3 text-4xl shadow-neumorphism transition-all duration-500 hover:text-accent-hover sm:text-6xl md:text-3xl">
+                          <TooltipTrigger className="bg-primary group flex cursor-default items-center justify-center rounded-xl p-3 text-4xl shadow-neumorphism transition-all duration-500 hover:text-accent-hover sm:text-6xl md:text-3xl">
                             <Icon />
                             <span className="ml-3 hidden text-sm md:block">
                               {skill.name}
                             </span>
                           </TooltipTrigger>
-                          <TooltipContent
-                            side="bottom"
-                            className="rounded-xl bg-zinc-700/10 px-2 py-1 text-sm"
-                          >
-                            <p className="capitalize">{skill.name}</p>
-                          </TooltipContent>
                         </Tooltip>
                       </TooltipProvider>
                     </li>

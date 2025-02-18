@@ -72,14 +72,14 @@ const Projects = () => {
             <TabList className="grid grid-cols-2 place-items-center gap-5 px-10 md:grid-cols-[repeat(4,_minmax(100px,_1fr))]">
               <Tab
                 value="all"
-                className="neumorphism-btn w-full rounded-xl p-3 text-sm/6 data-[selected]:text-accent-hover/80 data-[selected]:shadow-neumorphism-pressed focus:outline-none"
+                className="neumorphism-btn-selected neumorphism-btn w-full rounded-xl p-3 text-sm/6 focus:outline-none"
               >
                 # All
               </Tab>
               {projectList.map((project, index) => (
                 <Tab
+                  className="neumorphism-btn-selected neumorphism-btn w-full rounded-xl p-3 text-sm/6 focus:outline-none"
                   key={index}
-                  className="neumorphism-btn w-full rounded-xl p-3 text-sm/6 data-[selected]:text-accent-hover/80 data-[selected]:shadow-neumorphism-pressed focus:outline-none"
                 >
                   # {project.category}
                 </Tab>

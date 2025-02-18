@@ -10,7 +10,7 @@ function Title({ title, description }: Props) {
         {title}
       </h3>
       <p className="mx-auto my-2 h-[2px] w-full bg-gradient-to-r from-transparent via-accent-hover to-transparent"></p>
-      <p className="text-[11px] text-text-secondary md:text-sm">
+      <p className="text-light-text-secondary text-[11px] md:text-sm">
         {description}
       </p>
     </div>
