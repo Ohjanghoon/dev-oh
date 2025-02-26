@@ -37,4 +37,5 @@ export interface SkillDTO {
 interface SkillItem {
   name: string;
   icon: IconType;
+  color: string;
 }

@@ -29,10 +29,10 @@ function ThemeControl() {
   useEffect(() => {
     if (themeMode === "light") {
       dispatch(lightMode());
-      setThemeClass("bg-white ring-gray-400");
+      setThemeClass("bg-white/20 ring-gray-400");
     } else {
       dispatch(darkMode());
-      setThemeClass("bg-black ring-gray-100");
+      setThemeClass("bg-black/20 ring-gray-100");
     }
   }, [themeMode]);
 

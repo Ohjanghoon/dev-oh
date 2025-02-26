@@ -7,7 +7,7 @@ function Work() {
       {workList.map((work) => {
         return (
           <div
-            className="neumorphism-card relative w-full rounded-3xl"
+            className="neumorphism-card relative mt-5 w-full rounded-3xl first:mt-0"
             key={work.id}
           >
             {/* 도트 포인트 */}
