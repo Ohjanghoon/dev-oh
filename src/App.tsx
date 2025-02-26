@@ -7,6 +7,7 @@ import Hero from "./pages/Hero";
 import About from "./pages/About";
 import Experiences from "./pages/Experiences";
 import Projects from "./pages/Projects";
+import Footer from "./components/layouts/Footer";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
         {/* Projects 페이지 */}
         <Route path="/projects" element={<Projects />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
