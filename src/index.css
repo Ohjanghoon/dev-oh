@@ -9,12 +9,17 @@
   * {
     @apply select-none scroll-my-4 focus-visible:outline-none;
   }
+  html,
   body {
-    @apply bg-primary text-primary font-jetbrains text-base leading-loose tracking-tight transition-colors duration-300 ease-out;
+    @apply h-full w-full;
+  }
+  body {
+    @apply bg-primary text-primary h-screen font-jetbrains text-base leading-loose tracking-tight transition-colors duration-300 ease-out;
   }
   header {
     @apply fixed left-0 top-0 z-40 flex h-24 w-full items-center;
   }
+
   footer {
     @apply my-6 h-10 w-full bg-transparent;
   }
@@ -44,7 +49,7 @@
 \* ------------------------------- */
 @layer components {
   .container {
-    @apply mx-auto min-h-[calc(100vh-5.5rem)] pb-4 pt-24;
+    @apply mx-auto min-h-[calc(100vh-5.5rem)] px-2 pb-4 pt-24;
   }
   .bg-primary {
     @apply bg-light-primary dark:bg-dark-primary;

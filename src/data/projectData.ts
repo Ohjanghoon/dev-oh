@@ -18,7 +18,7 @@ export const projectList: ProjectDTO[] = [
   {
     category: "Personal",
     items: [
-      // dev-oh(24.12 ~ 25.01)
+      // dev-oh(24.12 ~ 25.02)
       {
         id: "personal_project_05",
         title: "dev-oh 포트폴리오",
@@ -27,45 +27,47 @@ export const projectList: ProjectDTO[] = [
           color: "bg-emerald-300",
         },
         description:
-          "통일부에서 운영하는 북한 관련 데이터 제공 웹사이트의 안정적인 서비스 제공 및 기능 개선을 목표로 한 유지보수 프로젝트에 참여하였습니다.",
+          "이 프로젝트는 학습한 기술을 적용하고 개발자로서의 역량을 효과적으로 보여주기 위해 React와 TailwindCSS를 활용하여 구축되었으며, 프로젝트 경험과 기술 스택을 정리하는 데 목적을 두고 있습니다. ",
         technologies: [
-          "Java",
-          "전자정부 프레임워크",
-          "CUBRID",
-          "JavaScript",
-          "Apache",
-          "Tomcat",
-          "JBoss",
-          "Python",
-          "GitLab",
-          "Google Workspace",
+          "React",
+          "TypeScript",
+          "TailwindCSS",
+          "Framer Motion",
+          "ViteJS",
+          "Firebase",
+          "GitHub",
         ],
         icon: BsPersonBadgeFill,
         role: "Frontend Developer",
         duration: {
           start: "2024.12",
-          end: "2025.01",
+          end: "2025.02",
         },
         teamSize: 1,
         responsibilities: [
           {
-            title: "",
-            content: [""],
+            title: "성능 최적화 및 UI/UX 작업",
+            content: [
+              "Vite 활용 - 빠른 번들링과 최적화된 로딩 성능 제공",
+              "React Router 사용 - SPA(Single Page Application) 구조 설계",
+              "TailwindCSS 적용 - 효율적인 스타일 관리 및 UI의 일관성 유지, 반응형/다크모드 제공",
+              "Framer Motion 활용 - 메인 페이지에 은하수가 떨어지는 듯한 무빙 도트 애니메이션 적용",
+            ],
           },
           {
-            title: "",
-            content: [""],
-          },
-          {
-            title: "",
-            content: [""],
+            title: "다크 모드 기능",
+            content: [
+              "redux-toolkit을 활용하여 테마 상태를 전역으로 관리",
+              "localStorage를 이용해 사용자의 다크 모드 설정을 저장하여 새로고침 후에도 유지",
+              "TailwindCSS의 다크 모드 기능과 연계하여 최적화된 UI 제공",
+            ],
           },
         ],
         achievements: ["", ""],
 
         repositoryUrl: {
           available: true,
-          url: "",
+          url: "https://github.com/Ohjanghoon/dev-oh",
           expression: "",
         },
         liveDemoUrl: {
@@ -74,7 +76,12 @@ export const projectList: ProjectDTO[] = [
           expression: "",
         },
         thumbnail: "",
-        screenshots: [],
+        screenshots: [
+          "personal_project_01_01.png",
+          "personal_project_01_02.png",
+          "personal_project_01_03.png",
+          "personal_project_01_04.png",
+        ],
       },
       /*// unsplash clone project(24.11 ~ 24.12)
       {
@@ -246,12 +253,14 @@ export const projectList: ProjectDTO[] = [
           color: "bg-orange-300",
         },
         description:
-          "통일부에서 운영하는 북한 관련 데이터 제공 웹사이트의 안정적인 서비스 제공 및 기능 개선을 목표로 한 유지보수 프로젝트에 참여하였습니다.",
+          "통일부의 북한정보포털 유지보수 프로젝트에 참여하여 웹 사이트의 성능 최적화 및 안정적인 서비스 운영을 지원하였습니다. 또한, 내부 CMS 시스템(콘텐츠 관리 시스템)도 함께 유지보수하며, 관리자 페이지의 UI/UX 개선 및 다양한 요구사항을 반영해 개발 진행하였습니다.",
         technologies: [
           "Java",
           "전자정부 프레임워크",
-          "CUBRID",
           "JavaScript",
+          "jQuery",
+          "CUBRID(DBMS)",
+          "MyBatis",
           "Apache",
           "Tomcat",
           "JBoss",
@@ -268,14 +277,31 @@ export const projectList: ProjectDTO[] = [
         teamSize: 1,
         responsibilities: [
           {
-            title: "",
-            content: ["신규 기능 개발 및 기존 코드 최적화, 에러사항 수정"],
+            title: "UI/UX 개선 작업",
+            content: [
+              "내부 CMS 및 웹 사이트의 UI 수정, 사용자 피드백과 요구사항을 반영한 UX 개선",
+            ],
           },
           {
-            title: "",
-            content: ["운영 환경 배포"],
+            title: "성능 최적화",
+            content: [
+              "기존 코드를 개선하고 쿼리 최적화를 통해 메인 페이지의 로딩 속도 개선",
+            ],
           },
-          { title: "", content: ["보안 점검 및 패치 적용"] },
+          {
+            title: "보안 강화 및 안정성 개선",
+            content: [
+              "웹 취약점 점검 결과에 따른 비밀번호 정책 강화 및 권한별 페이지 접근 제어 로직 개선",
+            ],
+          },
+          {
+            title: "데이터 처리",
+            content: [
+              "CMS 콘텐츠 관리 기능의 데이터 CRUD 작업",
+              "한글 파일 라이브러리를 활용하여 CMS에서 업로드된 HWP 파일을 파싱 및 데이터베이스 저장 구축",
+              "백엔드에서 DB 데이터를 조회하여 엑셀 파일로 변환 및 다운로드 기능 개발",
+            ],
+          },
         ],
         achievements: [
           "고객의 요구 사항을 신속히 반영하여 사용자 편의성 및 만족도 향상에 기여 ",
@@ -310,13 +336,16 @@ export const projectList: ProjectDTO[] = [
           color: "bg-orange-300",
         },
         description:
-          "한국과학기술정보연구원(KISTI)에서 진행한 메타버스 기반의 가상 실험실 프로젝트로, 게임과 같은 콘텐츠로 단계를 통해 사용자가 체계적으로 학습할 수 있는 교육 서비스입니다. 해당 프로젝트는 다양한 3D 실험 콘텐츠와 2D 학습 자료를 통합하여 학습 효율을 극대화하는 것을 목표로 하여 개발되었습니다.",
+          "한국과학기술정보연구원(KISTI)의 메타버스 기반 가상 실험실 프로젝트로, 게임과 같은 콘텐츠로 단계를 통해 사용자가 체계적으로 학습할 수 있는 교육 서비스입니다. 해당 프로젝트에서 [체세포, DNA, 주기율표, 소방, 수학] 5가지 콘텐츠에 참여하여 다양한 3D 실험과 2D 학습 자료를 통합하고, 학습 효율을 극대화하는 것을 목표로 하여 개발하였습니다.",
         technologies: [
-          "Angular",
-          "RxJS",
-          "BabylonJS",
           "TypeScript",
+          "JavaScript",
+          "Angular",
+          "BabylonJS",
+          "RxJS",
           "AWS(Amplify)",
+          "GitHub",
+          "Google Workspace",
         ],
         icon: GiCubes,
         role: "Frontend Developer",
@@ -327,50 +356,40 @@ export const projectList: ProjectDTO[] = [
         teamSize: 1,
         responsibilities: [
           {
-            title: "체세포 실험",
+            title: "UI/UX 개발 및 데이터 연동 작업",
             content: [
-              "이론 학습, 퀴즈, 튜토리얼 데이터와 UI를 바인딩",
-              "현미경 관찰 기능(사용자 조작에 따른 2D 좌표 이동) 구현 및 파이 차트 기반 시각화",
+              "실험 콘텐츠의 이론 학습, 튜토리얼, 퀴즈 등의 데이터를 UI와 바인딩하여 동적 인터페이스 구현",
+              "학습 게시판 및 학습 스코어 연동을 위한 플랫폼 API 연계 작업 수행",
             ],
           },
           {
-            title: "DNA 실험",
+            title: "사용자 인터랙션 실험 기능 개발",
             content: [
-              "실험 오브젝트 클릭 이벤트를 통한 순차적인 실험 진행 구현",
-              "난이도 선택에 따른 단계별 로직 구현",
+              "실험실 3D 오브젝트 클릭 이벤트를 활용한 단계별 실험 진행 로직 구현",
+              "실험 난이도 선택에 따른 동적 변화 처리 로직 구현",
+              "HTML 요소 이동, 회전, 뒤집기 등 사용자 조작 기반 애니메이션 및 상호작용 기능 개발",
             ],
           },
           {
-            title: "주기율표실험",
+            title: "시·청각적 요소를 통한 사용자 경험 개선",
             content: [
-              "주기율표 퍼즐 맞추기(클릭시 HTML 요소의 이동을 , 회전, 뒤집기 애니메이션 처리) 구현",
-              "BGM, 효과음, TTS 음량 조절 모듈화 및 마스터 볼륨 제어 로직 개발",
-              "외계인 학습노트와 이론 데이터를 플랫폼 API로 연동",
+              "WebGL 기반 BabylonJS의 Material 및 Texture를 활용하여 연기·불꽃 애니메이션을 구현하고, 실험 환경의 그래픽 렌더링 성능 최적화",
+              "BGM, 효과음, TTS 음량 조절 모듈화 및 마스터 볼륨 제어 로직 개발을 통해 사용자 맞춤형 오디오 환경 구축",
             ],
           },
           {
-            title: "소방 실험",
+            title: "기획 및 설계 참여",
             content: [
-              "연기 파티클 효과와 BabylonJS에 material과 texture 활용한 불꽃 애니메이션 개발.",
-              "소화 도구의 상호작용 애니메이션 구현",
-              "사용자의 실험 몰입감을 높이기 위해 단발적인 효과음(소화 도구)과 반복되는 효과음(불 연소, 소화기) 적용",
-            ],
-          },
-          {
-            title: "수학 실험",
-            content: [
-              "기획 및 화면 정의서 작성으로 콘텐츠 설계에 참여",
-              "실험 콘텐츠 중 Shift 이동 암호를 CSS와 JS 기술을 활용하여 2D 회전판 구현",
-              "학습 이론 모아보기 게시판 데이터 바인딩 및 연동 작업",
+              "실험 콘텐츠의 기획 및 화면 정의서 작성을 통해 개발 초기 단계부터 콘텐츠 설계 참여",
+              "스토리텔링 요소 적용으로 학습자의 흥미를 유도하는 UI/UX 구성에 기여",
             ],
           },
         ],
         achievements: [
-          "Angular와 BabylonJS를 활용한 3D/2D 혼합 콘텐츠 개발 역량 강화할 수 있었습니다.",
+          "Angular와 BabylonJS를 활용한 2D/3D 혼합 콘텐츠 개발 역량 강화할 수 있었습니다.",
+          "콘텐츠 개발의 전체 프로세스를 경험하며, 화면 정의서 작성 및 기획 참여를 통해 콘텐츠 개발 과정에 대한 이해도를 높일 수 있었습니다.",
           "플랫폼 API 연동 작업을 하며 데이터를 동적으로 처리하는 방법을 익힐 수 있었고, 이를 통해 사용자 맞춤형 콘텐츠 제공에 필요한 데이터 흐름과 API 활용 방식을 이해할 수 있었습니다.",
-          "콘텐츠 개발 전반의 프로세스를 경험할 수 있었으며, 기획 참여를 통해 클라이언트 측과의 요구사항 소통 및 개발 방향성 조율을 경험할 수 있었습니다.",
-          "타 개발자 및 디자이너와의 원활한 커뮤니케이션을 통해 프로젝트를 효율적으로 진행할 수 있었으며, 결과물의 완성도와 품질을 높이는 데 기여할 수 있었습니다.",
-          "해당 실험 콘텐츠들의 작업 기간이 1개월로 매우 촉박했음에도 불구하고, 팀원들과의 긴밀한 협업과 효과적인 작업 분배를 통해 품질 높은 결과물을 제작할 수 있었습니다. 특히, 클라이언트로부터 긍정적인 피드백을 받아 사용자 경험과 완성도 측면에서 높은 만족도를 이끌어낼 수 있었습니다.",
+          "실험 콘텐츠당 작업 기한이 1개월이라는 촉박한 일정 속에서도 팀원들과 긴밀히 협업하고 효과적으로 작업을 분배하여 높은 품질의 결과물을 제작했습니다. 특히, 클라이언트로부터 긍정적인 피드백을 받아 사용자 경험과 완성도 측면에서 높은 만족도를 이끌어냈습니다.",
         ],
         repositoryUrl: {
           available: false,
@@ -405,20 +424,24 @@ export const projectList: ProjectDTO[] = [
       // DIGITAL TWIN (23.02 ~ 23.05)
       {
         id: "corporate_project_02",
-        title: "Digitial Twin",
+        title: "디지털 트윈 프로젝트",
         type: {
           name: "회사 프로젝트",
           color: "bg-orange-300",
         },
         // 참여하였습니다. 이를 통해 실시간 데이터 수집 및 분석, 효율적인 설비 관리, 문제 상황에 대한 빠른 대응을 가능하게 했습니다.
         description:
-          "자사 솔루션 디지털 트윈 기술을 활용하여 한국수자원공사와 (주)신성이엔지 공장에 최적화된 관제형 시스템을 구축하는 프로젝트에 실시간 데이터 처리 및 시각화 모듈 개발에 참여하였습니다.",
+          "자사 솔루션 디지털 트윈 기술을 활용하여 공장 및 설비 모니터링 시스템 구축 프로젝트에 참여하였으며, 실시간 데이터 처리 및 시각화 모듈을 개발하였습니다.",
         technologies: [
-          "Angular",
-          "RxJS",
-          "BabylonJS",
           "TypeScript",
-          "AWS(Amplify)",
+          "JavaScript",
+          "Angular",
+          "BabylonJS",
+          "RxJS",
+          "NodeJS",
+          "MongoDB",
+          "GitLab",
+          "Google Workspace",
         ],
         icon: MdFactory,
         role: "Frontend Developer",
@@ -427,8 +450,35 @@ export const projectList: ProjectDTO[] = [
           end: "2023.05",
         },
         teamSize: 1,
-        responsibilities: [],
-        achievements: [""],
+        responsibilities: [
+          {
+            title: "데이터 시각화",
+            content: [
+              "실시간 작업자 및 설비에 대한 위험도 데이터를 활용하여 종합현황 차트 개발",
+              "실시간 작업자 행동에 따른 동적인 애니메이션 구현",
+              "설비 자산 상태에 따른 설비 색상 적용 구현",
+            ],
+          },
+          {
+            title: "사용자 인터랙션 기능",
+            content: [
+              "운영 데이터 패널 on/off 기능 개발",
+              "관리자 페이지에서 사용자 관리 및 권한 관리 기능 개발",
+              "날짜·작업자ID 등 조건 검색을 통한 알람 이력 조회 구현",
+            ],
+          },
+          {
+            title: "데이터 연동 및 처리",
+            content: [
+              "엑셀 파일 업로드하여 해당 데이터 기반으로 트윈 객체 생성 기능 로직 구현",
+            ],
+          },
+        ],
+        achievements: [
+          "실시간 위험도 데이터를 활용한 차트 및 애니메이션을 구현하며 데이터 시각화 및 UI 개발 역량을 향상시켰습니다.",
+          "엑셀 파일을 활용한 트윈 객체 생성 기능을 구현하며 파일 데이터 처리 및 데이터 구조화 기술을 익혔습니다.",
+          "협업 툴 활용을 익히며 팀 개발 환경에 적응할 수 있었고, 작은 업무부터 점진적으로 맡아가며 실무 개발자로서의 역량을 쌓을 수 있었습니다.",
+        ],
         repositoryUrl: {
           available: false,
           url: "",
@@ -447,24 +497,26 @@ export const projectList: ProjectDTO[] = [
       // AWS Serverless (22.12 ~ 23.02)
       {
         id: "corporate_project_01",
-        title: "AWS Serverless",
+        title: "AWS 서버리스 상품 판매 플랫폼",
         type: {
           name: "회사 프로젝트",
           color: "bg-orange-300",
         },
         description:
-          "회사 입사 후 수습 기간 중 진행한 실무 관련 프로젝트로, AWS를 활용한 Serverless 아키텍처 기반의 상품 판매 플랫폼입니다. 서버 관리 부담을 줄이고 확장성을 극대화하기 위해 다양한 AWS 서비스를 활용하여 구현되었습니다.",
+          "입사 초기 진행한 프로젝트로, AWS 기반 Serverless 아키텍처를 활용한 상품 판매 플랫폼을 개발하였습니다. 서버 운영 부담을 줄이고 확장성을 극대화하기 위해 AWS Lambda, API Gateway, DynamoDB, S3 등 다양한 클라우드 서비스를 적용하였습니다.",
         technologies: [
-          "Angular",
           "TypeScript",
+          "JavaScript",
+          "Angular",
           "CSS",
-          "AWS(Amplify)",
           "AWS(IAM)",
-          "AWS(Cognito)",
-          "AWS(S3)",
-          "AWS(APIGateway)",
-          "AWS(Lamda)",
+          "AWS(API Gateway)",
+          "AWS(Lambda)",
           "AWS(DynamoDB)",
+          "AWS(Amplify)",
+          "AWS(S3)",
+          "GitLab",
+          "Google Workspace",
         ],
         icon: HiServer,
         role: "Frontend Developer",
@@ -475,26 +527,23 @@ export const projectList: ProjectDTO[] = [
         teamSize: 1,
         responsibilities: [
           {
-            title: "상품 관리 기능",
-            content: ["DynamoDB를 활용하여 상품 데이터의 CRUD 기능을 개발"],
-          },
-          {
-            title: "이미지 관리 기능",
+            title: "서버리스 기반 상품 판매 플랫폼 개발",
             content: [
-              "AWS S3의 Presigned URL을 활용하여 사용자가 이미지 파일을 안전하게 업로드 및 다운로드할 수 있도록 구현",
+              "API Gateway, Lambda, DynamoDB를 활용하여 상품 데이터 CRUD 기능 개발",
+              "S3 Presigned URL을 이용한 이미지 파일을 업로드 기능 구현",
+              "백엔드와의 통신을 위한 REST API 설계 및 연동",
             ],
           },
           {
             title: "AWS IAM 기반 권한 관리",
             content: [
-              "ASW IAM을 활용하여 사용자 아이디에 따른 권한을 세분화하여 특정 기능 접근 제어",
+              "AWS IAM을 활용하여 사용자 아이디에 따른 권한을 세분화하여 특정 기능 접근 제어",
               "역할(Role) 및 정책(Policy)을 통해 데이터 보안과 서비스 안정성 작업",
             ],
           },
         ],
         achievements: [
-          "Serverless 아키텍처의 장점을 활용하여 비용 절감 및 확장성 높은 시스템 구현",
-          "상품 이미지 관리 기능 개발로 사용자 경험 향상 및 데이터 보안 강화",
+          "API Gateway, Lambda, DynamoDB를 활용하여 서버리스 환경에서 상품 데이터 CRUD 기능을 구현하며, AWS를 처음 활용해보았습니다. 프로젝트를 통해 클라우드 인프라에 대한 이해도를 높일 수 있었습니다.",
         ],
         repositoryUrl: {
           available: false,
@@ -763,7 +812,7 @@ export const studyList = [
       start: "2024.10",
       end: "2024.10",
     },
-    repositoryUrl: "",
+    repositoryUrl: "https://github.com/Ohjanghoon/nextjs-portfolio-clone",
   },
   {
     id: "learning_02",
@@ -774,7 +823,7 @@ export const studyList = [
       start: "2024.10",
       end: "2024.09",
     },
-    repositoryUrl: "",
+    repositoryUrl: "https://github.com/Ohjanghoon/learn-nextjs14",
   },
   {
     id: "learning_01",
@@ -785,6 +834,6 @@ export const studyList = [
       start: "2024.09",
       end: "2024.09",
     },
-    repositoryUrl: "",
+    repositoryUrl: "https://github.com/Ohjanghoon/react-for-beginners-2",
   },
 ];

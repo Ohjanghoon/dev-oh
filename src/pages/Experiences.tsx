@@ -1,5 +1,4 @@
 // node modules
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { motion } from "framer-motion";
 
 // components
