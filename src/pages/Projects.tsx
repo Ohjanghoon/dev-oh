@@ -57,8 +57,7 @@ const Projects = () => {
         >
           <Title
             title="Projects"
-            description="다양한 기술을 적용하고 문제를 해결하며 완성한 프로젝트를
-            확인해보세요."
+            description="다양한 프로젝트를 통해 경험과 기술들을 쌓고 있습니다."
           />
         </motion.div>
 

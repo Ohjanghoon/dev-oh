@@ -12,7 +12,6 @@ const ProfileCard = () => {
     { title: "Name", content: "오장훈" },
     { title: "Age", content: "1995.02.20" },
     { title: "Phone", content: "010-8567-4105" },
-    { title: "Address", content: "서울시 영등포구" },
     { title: "E-mail", content: "ojh4105@naver.com" },
   ];
   return (
@@ -48,13 +47,22 @@ const ProfileCard = () => {
       >
         <table className="text-sm md:text-lg">
           <tbody>
+            <tr>
+              <td colSpan={2}>
+                <img
+                  src="/assets/dev-oh avatar.png"
+                  className="mx-auto my-5 h-28 w-28 rounded-full"
+                  alt="avatar"
+                />
+              </td>
+            </tr>
             {profileInfo.map((item, index) => {
               return (
                 <tr key={index}>
                   <td className="font-extrabold text-accent-hover">
                     {item.title}
                   </td>
-                  <td className="px-4 py-2">{item.content}</td>
+                  <td className="py-2 md:px-3">{item.content}</td>
                 </tr>
               );
             })}

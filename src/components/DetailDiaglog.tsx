@@ -120,7 +120,7 @@ function DetailDialog({ data: item, handleOpenDialog }: Props) {
                           <img
                             src={`/assets/images/projects/${screenshot}`}
                             alt=""
-                            className="h-[160px] w-full border-[0.5px] border-black object-cover object-top md:h-[420px]"
+                            className="h-full w-full border-[0.5px] border-black object-cover object-top sm:h-[400px]"
                           />
                         </SwiperSlide>
                       );
@@ -128,7 +128,7 @@ function DetailDialog({ data: item, handleOpenDialog }: Props) {
                   </Swiper>
                 ) : (
                   <div className="h-full w-full pb-8">
-                    <div className="text-light-text-light/60 inline-flex h-[160px] w-full flex-col items-center justify-center bg-slate-400 md:h-[400px]">
+                    <div className="text-light-text-light/60 inline-flex h-[160px] w-full flex-col items-center justify-center bg-slate-400 sm:h-[400px]">
                       <MdImageNotSupported className="mx-auto text-[6rem] md:text-[12rem]" />
                       <h6 className="text-center">No Image</h6>
                     </div>
@@ -157,7 +157,7 @@ function DetailDialog({ data: item, handleOpenDialog }: Props) {
             </div>
 
             {/* 콘텐츠 영역 */}
-            <div className="mt-6 inline-flex w-full flex-col gap-10 px-3 py-3">
+            <div className="mt-6 inline-flex w-full flex-col gap-10 px-3 py-3 font-normal">
               {/* 프로젝트 설명 */}
               <div>
                 <h6 className="inline rounded-[3px] border-l-4 border-accent-hover bg-accent-hover/10 px-2 py-1 dark:bg-accent-hover/30">
@@ -200,7 +200,7 @@ function DetailDialog({ data: item, handleOpenDialog }: Props) {
                     return (
                       <li key={"res" + index}>
                         <ul className="list-disc">
-                          <p className="font-bold tracking-tighter">
+                          <p className="font-semibold tracking-tighter">
                             * {task.title}
                           </p>
                           {task.content.map((content, taskKey) => {

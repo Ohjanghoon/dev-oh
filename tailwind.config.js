@@ -39,7 +39,7 @@ export default {
           surface: "#23232a",
           gradient: "#2b3a55",
           text: {
-            DEFAULT: "#f7f7f8",
+            DEFAULT: "#e5e7eb",
             dark: "#1c1c22",
           },
         },

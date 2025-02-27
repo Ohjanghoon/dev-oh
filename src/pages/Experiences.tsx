@@ -1,5 +1,4 @@
 // node modules
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { motion } from "framer-motion";
 
 // components
@@ -39,52 +38,38 @@ function Experiences() {
           whileInView={"show"}
           viewport={{ once: false, amount: 0.2 }}
         >
-          <TabGroup className="flex flex-col gap-0 md:mx-20 lg:flex-row lg:gap-[40px]">
-            <TabList className="mx-auto inline-flex h-auto w-full max-w-[280px] flex-row justify-center gap-3 p-1 text-sm lg:mx-0 lg:flex-col lg:justify-start lg:gap-0 xl:max-w-[330px]">
-              {experiencesList.map((experience, index) => {
-                const Icon = experience.icon;
-                return (
-                  <Tab
-                    key={index}
-                    className="neumorphism-btn neumorphism-btn-selected my-3 rounded-xl p-3 focus:outline-none"
+          {experiencesList.map((experience) => {
+            const Content = experience.content;
+            return (
+              <div
+                key={experience.id}
+                className="my-14 grid grid-cols-1 gap-[20px] p-3 last:mb-0 md:mx-20 lg:grid-cols-[1fr_2fr]"
+              >
+                <div className="w-full place-self-start px-3">
+                  {/* 제목 영역 */}
+                  <h2 className="relative inline-block font-extrabold">
+                    {experience.title}
+                    <span className="absolute bottom-1 left-0 -z-10 h-[10px] w-full rounded-full bg-gradient-to-r from-accent-400"></span>
+                  </h2>
+                  {/* 제목 설명 영역 */}
+                  <p className="text-light-text-secondary my-2 w-full break-keep text-sm font-light tracking-tighter sm:text-base">
+                    {experience.description}
+                  </p>
+                </div>
+                <div className="w-full">
+                  {/* 본문 영역 */}
+                  <motion.div
+                    variants={fadeIn("right", 0)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: true, amount: 0.05 }}
                   >
-                    <div className="flex items-center justify-center gap-2">
-                      <Icon />
-                      {experience.title}
-                    </div>
-                  </Tab>
-                );
-              })}
-            </TabList>
-            <TabPanels className="min-h-[70vh] w-full p-3">
-              {experiencesList.map((experience, index) => {
-                const Content = experience.content;
-
-                return (
-                  <TabPanel key={index}>
-                    {/* 제목 영역 */}
-                    <h3 className="hidden text-center text-2xl font-bold lg:inline-block lg:text-start xl:text-3xl">
-                      My {experience.title}
-                    </h3>
-                    {/* 제목 설명 영역 */}
-                    <p className="my-2 w-full break-keep text-center text-sm font-light tracking-tighter sm:text-base lg:text-start">
-                      "{experience.description}"
-                    </p>
-                    {/* 본문 영역 */}
-                    <motion.div
-                      variants={fadeIn("right", 0)}
-                      initial="hidden"
-                      whileInView={"show"}
-                      viewport={{ once: false, amount: 0.05 }}
-                      className="mt-8 w-full"
-                    >
-                      <Content />
-                    </motion.div>
-                  </TabPanel>
-                );
-              })}
-            </TabPanels>
-          </TabGroup>
+                    <Content />
+                  </motion.div>
+                </div>
+              </div>
+            );
+          })}
         </motion.div>
       </motion.div>
     </section>
