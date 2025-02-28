@@ -381,7 +381,7 @@ export const projectList: ProjectDTO[] = [
             title: "기획 및 설계 참여",
             content: [
               "실험 콘텐츠의 기획 및 화면 정의서 작성을 통해 개발 초기 단계부터 콘텐츠 설계 참여",
-              "스토리텔링 요소 적용으로 학습자의 흥미를 유도하는 UI/UX 구성에 기여",
+              "스토리텔링 요소 적용으로 학습자의 흥미를 유도하는 UI/UX 구성",
             ],
           },
         ],
@@ -492,7 +492,10 @@ export const projectList: ProjectDTO[] = [
             "해당 프로젝트는 사내 보안 정책에 따라 이미지와 Demo를 제공할 수 없는 점 양해 부탁드립니다.",
         },
         thumbnail: "project_04_01.png",
-        screenshots: [],
+        screenshots: [
+          "corporate_project_02_01.png",
+          "corporate_project_02_02.png",
+        ],
       },
       // AWS Serverless (22.12 ~ 23.02)
       {
