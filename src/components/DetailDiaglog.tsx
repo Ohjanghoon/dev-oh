@@ -193,7 +193,7 @@ function DetailDialog({ data: item, handleOpenDialog }: Props) {
               {/* 프로젝트 주요 개발 사항 */}
               <div>
                 <h6 className="inline rounded-[3px] border-l-4 border-accent-hover bg-accent-hover/10 px-2 py-1 dark:bg-accent-hover/30">
-                  주요 개발 및 기여
+                  주요 개발
                 </h6>
                 <ul className="m-2 mt-3 flex flex-col gap-4">
                   {item.responsibilities.map((task, index) => {

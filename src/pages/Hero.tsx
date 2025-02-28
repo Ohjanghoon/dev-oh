@@ -56,12 +56,17 @@ function Hero() {
 
           {/* btn & socials */}
           <div className="mt-8 flex items-center justify-center gap-12">
-            <button className="neumorphism-btn flex items-center gap-2 rounded-[6rem] px-8 py-5 font-semibold uppercase">
-              <span className="text-[10px] xs:text-[13px] sm:text-base">
-                경력기술서 다운로드
-              </span>
-              <FiDownload className="text-secandary text-xl" />
-            </button>
+            <a
+              href="/assets/resume/경력기술서_오장훈.pdf"
+              download="경력기술서_오장훈.pdf"
+            >
+              <button className="neumorphism-btn flex items-center gap-2 rounded-[6rem] px-8 py-5 font-semibold uppercase">
+                <span className="text-[10px] xs:text-[11px] sm:text-base">
+                  경력기술서 다운로드
+                </span>
+                <FiDownload className="text-secandary text-xl" />
+              </button>
+            </a>
             <div className="">
               <Social />
             </div>
