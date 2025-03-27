@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Experiences from "./pages/Experiences";
 import Projects from "./pages/Projects";
 import Footer from "./components/layouts/Footer";
+import PageScrollToTop from "./components/PageScrollToTop";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       {/* Header는 모든 페이지에서 공통으로 렌더링 */}
       <Header />
       <main>
+        <PageScrollToTop />
         <Routes>
           <Route path="/" element={<Hero />} />
           {/* About 페이지 */}
