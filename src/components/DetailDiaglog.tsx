@@ -145,6 +145,7 @@ function DetailDialog({ data: item, handleOpenDialog }: Props) {
                 {/* 프로젝트 URL */}
                 {item.liveDemoUrl.available ? (
                   <a
+                    title="project_liveDemoUrl_link"
                     href={item.liveDemoUrl.url}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -251,6 +252,7 @@ function DetailDialog({ data: item, handleOpenDialog }: Props) {
                 </h6>
                 {item.repositoryUrl?.available ? (
                   <a
+                    title="project_githubUrl_link"
                     href={item.repositoryUrl.url}
                     target="_blank"
                     rel="noopener noreferrer"

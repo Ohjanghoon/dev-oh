@@ -28,6 +28,7 @@ function Social() {
       {socials.map((item, index) => {
         return (
           <a
+            title={`${item.name}_link`}
             href={item.path}
             target="_blank"
             key={index}

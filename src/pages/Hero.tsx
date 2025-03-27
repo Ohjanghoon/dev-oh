@@ -57,6 +57,7 @@ function Hero() {
           {/* btn & socials */}
           <div className="mt-8 flex flex-col items-center justify-center gap-8 md:flex-row md:gap-12">
             <a
+              title="resume_download_link"
               href="/assets/resume/경력기술서_오장훈.pdf"
               download="경력기술서_오장훈.pdf"
             >

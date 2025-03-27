@@ -36,7 +36,11 @@ function Header() {
       <div className="mx-auto flex w-full max-w-screen-2xl items-center justify-between px-4 md:grid md:grid-cols-[1fr,4fr] md:px-6">
         {/* Logo 영역 */}
         <h1>
-          <a href="/" className="logo flex items-center justify-center gap-3">
+          <a
+            title="home_link"
+            href="/"
+            className="logo flex items-center justify-center gap-3"
+          >
             <Img
               src="/assets/logo_dev-oh.ico"
               width={32}

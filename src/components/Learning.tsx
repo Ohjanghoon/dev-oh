@@ -11,6 +11,7 @@ function Learning() {
         const Icon = item.icon;
         return (
           <a
+            title={`${item.id}_github_link`}
             href={item.repositoryUrl}
             target="_blank"
             className="flex-1 basis-1/3"
