@@ -24,6 +24,7 @@ import {
   SiGitlab,
   SiNotion,
   SiMongodb,
+  SiSupabase,
 } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc";
 import { PiSlackLogoFill } from "react-icons/pi";
@@ -161,11 +162,15 @@ export const skillList: SkillDTO[] = [
         color: "#61DAFB",
       },
       {
+        name: "Next.js",
+        icon: RiNextjsFill,
+        color: "#000000",
+      },
+      {
         name: "Angular",
         icon: RiAngularjsFill,
         color: "#DD0031",
       },
-
       {
         name: "TailwindCSS",
         icon: RiTailwindCssFill,
@@ -177,13 +182,13 @@ export const skillList: SkillDTO[] = [
         color: "#764ABC",
       },
       {
-        name: "Next.js",
-        icon: RiNextjsFill,
-        color: "#000000",
+        name: "Framer motion",
+        icon: "/assets/icons/framer_motion.png",
+        color: "#646CFF",
       },
       {
         name: "ViteJS",
-        icon: SiVite,
+        icon: "/assets/icons/vitejs.svg",
         color: "#646CFF",
       },
     ],
@@ -196,6 +201,11 @@ export const skillList: SkillDTO[] = [
         name: "Spring",
         icon: SiSpring,
         color: "#6DB33F",
+      },
+      {
+        name: "Supabase",
+        icon: SiSupabase,
+        color: "#3FCF8E",
       },
       {
         name: "Oracle",

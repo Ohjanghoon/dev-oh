@@ -44,7 +44,7 @@ function About() {
                 <span className="absolute bottom-1 left-0 -z-10 h-[10px] w-full rounded-full bg-gradient-to-r from-accent-400"></span>
               </h2>
               {/* 제목 설명 영역 */}
-              <p className="my-2 w-full break-keep text-sm font-light tracking-tighter text-light-text-secondary sm:text-base">
+              <p className="my-2 w-full break-keep text-sm font-light text-light-text-secondary sm:text-base">
                 #프론트엔드 #성장 #배움
               </p>
             </div>
@@ -54,15 +54,15 @@ function About() {
               <span className="absolute bottom-4 right-4 h-2 w-2 rounded-full bg-accent-hover/55"></span>
 
               {/* 본문 영역 */}
-              <div className="px-10 py-7 text-sm/6">
-                <div className="w-full leading-8 tracking-tighter">
+              <div className="px-7 py-7 text-sm md:px-10">
+                <div className="w-full leading-8">
                   <p className="align-middle text-lg font-semibold">
                     “안녕하세요! 2년차 웹 프론트엔드 개발자 오장훈입니다.”
                   </p>
                   <br />
                   <p>
                     저는{" "}
-                    <span className="font-semibold">
+                    <span className="font-semibold text-accent-400">
                       TypeScript, React, Next.js
                     </span>
                     를 중심으로 개발하며, Angular, Java, OracleDB, Python, AWS
@@ -76,8 +76,11 @@ function About() {
                   <p>
                     또한, 개발은 혼자가 아닌 팀과 함께 만들어가는 과정이라고
                     생각합니다. 개발팀, 디자이너, 기획자 등 다양한 동료들과
-                    협업하며, 원활한 소통을 통해 요구사항을 효과적으로 반영하고
-                    있습니다. <br />
+                    협업하며,{" "}
+                    <span className="font-semibold text-accent-400">
+                      원활한 소통
+                    </span>
+                    을 통해 요구사항을 효과적으로 반영하고 있습니다. <br />
                     특히, 북한정보포털 프로젝트에서는 기획자 및 관리자들과
                     긴밀히 소통하며 CMS 시스템의 UX를 개선하는 작업에
                     참여하였고, 이를 통해 사용자 편의성을 높이고, 다양한
@@ -91,8 +94,15 @@ function About() {
                     프로젝트에 효과적으로 적용하여 사용자 경험을 개선하는 데
                     집중하고 있습니다.
                     <br />
-                    앞으로도 지속적인 배움을 통해 기술을 익히고, 경험을 바탕으로
-                    꾸준히 성장하는 개발자가 되고자 합니다.
+                    앞으로도{" "}
+                    <span className="font-semibold text-accent-400">
+                      지속적인 배움
+                    </span>
+                    을 통해 기술을 익히고,
+                    <span className="font-semibold text-accent-400">
+                      경험을 바탕으로 꾸준히 성장
+                    </span>
+                    하는 개발자가 되고자 합니다.
                   </p>
                   <br />
                   <p>감사합니다.</p>

@@ -21,7 +21,7 @@ function Work() {
               {/* 재직 기간 */}
               <div className="mt-1 flex flex-col items-start gap-[8px] xs:flex-row xs:items-center xs:gap-[16px]">
                 <span className="text-light-text-neutral">{work.duration}</span>
-                <span className="py-1/2 rounded-full bg-zinc-50/50 px-3 text-[10px] font-semibold tracking-tighter text-accent-400 ring-1 dark:bg-accent-400 dark:text-zinc-50">
+                <span className="py-1/2 rounded-full bg-zinc-50/50 px-3 text-[10px] font-semibold text-accent-400 ring-1 dark:bg-accent-400 dark:text-zinc-50">
                   {work.month}
                 </span>
               </div>

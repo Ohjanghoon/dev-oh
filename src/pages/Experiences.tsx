@@ -52,7 +52,7 @@ function Experiences() {
                     <span className="absolute bottom-1 left-0 -z-10 h-[10px] w-full rounded-full bg-gradient-to-r from-accent-400"></span>
                   </h2>
                   {/* 제목 설명 영역 */}
-                  <p className="my-2 w-full break-keep text-sm font-light tracking-tighter text-light-text-secondary sm:text-base">
+                  <p className="my-2 w-full break-keep text-sm font-light text-light-text-secondary sm:text-base">
                     {experience.description}
                   </p>
                 </div>
