@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/store";
@@ -24,8 +24,6 @@ function ThemeControl() {
     }
   };
 
-  const [themeClass, setThemeClass] = useState<string>("");
-
   useEffect(() => {
     if (themeMode === "light") {
       dispatch(lightMode());
@@ -37,7 +35,7 @@ function ThemeControl() {
   return (
     <button
       aria-label="theme_control_button"
-      className={`${themeClass} justify-self-end p-2 transition-all hover:rotate-[-30deg]`}
+      className="justify-self-end p-2 transition-all hover:rotate-[-30deg]"
       onClick={themeHandler}
     >
       {themeMode === "light" ? (
