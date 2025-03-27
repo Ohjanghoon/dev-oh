@@ -29,11 +29,11 @@ const ProfileCard = () => {
             className="h-52 w-full lg:h-72"
           />
         </div>
-        <p className="text-light-text-secondary text-sm font-semibold underline underline-offset-2">
+        <p className="text-sm font-semibold text-light-text-secondary underline underline-offset-2">
           Frontend Developer
         </p>
         <span
-          className="hover:text-light-text-light cursor-pointer rounded-full px-4 py-1 text-accent-hover ring-1 ring-accent-hover hover:bg-accent-hover"
+          className="cursor-pointer rounded-full px-4 py-1 text-accent-hover ring-1 ring-accent-hover hover:bg-accent-hover hover:text-light-text-light"
           onClick={() => setFlip((prev) => !prev)}
         >
           More Info
@@ -45,7 +45,7 @@ const ProfileCard = () => {
         transition={{ duration: 0.7 }}
         className="flip-card-back flex h-full w-full flex-col items-center justify-center gap-6 bg-white/50"
       >
-        <table className="text-sm md:text-lg">
+        <table className="text-sm lg:text-lg">
           <tbody>
             <tr>
               <td colSpan={2}>
@@ -70,7 +70,7 @@ const ProfileCard = () => {
         </table>
 
         <span
-          className="text-light-text-light cursor-pointer rounded-full bg-accent-hover px-6 py-2"
+          className="cursor-pointer rounded-full bg-accent-hover px-6 py-2 text-light-text-light"
           onClick={() => setFlip((prev) => !prev)}
         >
           <BsPhoneFlip className="text-2xl" />
