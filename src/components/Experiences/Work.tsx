@@ -15,7 +15,7 @@ function Work() {
             <span className="absolute bottom-4 right-4 h-2 w-2 rounded-full bg-accent-hover/55"></span>
 
             {/* 본문 영역 */}
-            <div className="px-10 py-7 text-sm/6">
+            <div className="px-7 py-7 text-sm/6 md:px-10">
               {/* 기업명 */}
               <h3 className="text-3xl font-bold">{work.name}</h3>
               {/* 재직 기간 */}

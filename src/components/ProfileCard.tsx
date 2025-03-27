@@ -11,7 +11,7 @@ const ProfileCard = () => {
   const profileInfo = [
     { title: "Name", content: "오장훈" },
     { title: "Age", content: "1995.02.20" },
-    { title: "Phone", content: "010-8567-4105" },
+    // { title: "Phone", content: "010-8567-4105" },
     { title: "E-mail", content: "ojh9502@gmail.com" },
   ];
   return (

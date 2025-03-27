@@ -165,7 +165,13 @@ function DetailDialog({ data: item, handleOpenDialog }: Props) {
                 <h6 className="inline rounded-[3px] border-l-4 border-accent-hover bg-accent-hover/10 px-2 py-1 dark:bg-accent-hover/30">
                   개요
                 </h6>
-                <p className="m-2 mt-3">{item.description}</p>
+                <div className="m-2 mt-3">
+                  {item.description.split("\n").map((text) => (
+                    <>
+                      <p>{text}</p>
+                    </>
+                  ))}
+                </div>
               </div>
               {/* 프로젝트 기술 */}
               <div>

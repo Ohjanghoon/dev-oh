@@ -98,7 +98,7 @@ function About() {
                     <span className="font-semibold text-accent-400">
                       지속적인 배움
                     </span>
-                    을 통해 기술을 익히고,
+                    을 통해 기술을 익히고,{" "}
                     <span className="font-semibold text-accent-400">
                       경험을 바탕으로 꾸준히 성장
                     </span>
