@@ -33,10 +33,10 @@ function About() {
           variants={fadeIn("right", 0.6)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.1 }}
           // className="my-8 grid min-h-[50vh] gap-6 p-3 text-center md:mx-20"
         >
-          <div className="my-14 grid grid-cols-1 gap-[20px] p-3 last:mb-0 md:mx-20 lg:grid-cols-[1fr_2fr]">
+          <div className="my-10 grid grid-cols-1 gap-[20px] p-3 last:mb-0 md:mx-20 lg:grid-cols-[1fr_2fr]">
             <div className="w-full place-self-start px-3">
               {/* 제목 영역 */}
               <h2 className="relative inline-block font-extrabold">
@@ -44,7 +44,7 @@ function About() {
                 <span className="absolute bottom-1 left-0 -z-10 h-[10px] w-full rounded-full bg-gradient-to-r from-accent-400"></span>
               </h2>
               {/* 제목 설명 영역 */}
-              <p className="text-light-text-secondary my-2 w-full break-keep text-sm font-light tracking-tighter sm:text-base">
+              <p className="my-2 w-full break-keep text-sm font-light tracking-tighter text-light-text-secondary sm:text-base">
                 #프론트엔드 #성장 #배움
               </p>
             </div>
@@ -63,10 +63,10 @@ function About() {
                   <p>
                     저는{" "}
                     <span className="font-semibold">
-                      TypeScript, React, Angular
+                      TypeScript, React, Next.js
                     </span>
-                    를 중심으로 개발하며, Java, OracleDB, Python, AWS 등 다양한
-                    기술을 활용한 경험이 있습니다.
+                    를 중심으로 개발하며, Angular, Java, OracleDB, Python, AWS
+                    등 다양한 기술을 활용한 경험이 있습니다.
                     <br />
                     메타버스 교육 플랫폼과 대국민 서비스 웹사이트 유지보수 등
                     다양한 프로젝트에서 쌓은 경험을 바탕으로 UI/UX 최적화 및 웹
@@ -86,7 +86,7 @@ function About() {
                   </p>
                   <br />
                   <p>
-                    나아가 저는 기술을 학습한 뒤 실무에 적용하는 과정을 중요하게
+                    나아가 저는 기술을 학습한 뒤 실제로 적용하는 과정을 중요하게
                     생각합니다. 새로운 기술을 배우는 것에 그치지 않고, 이를 실제
                     프로젝트에 효과적으로 적용하여 사용자 경험을 개선하는 데
                     집중하고 있습니다.

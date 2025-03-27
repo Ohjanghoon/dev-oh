@@ -6,7 +6,7 @@ import { studyList } from "../data/projectData";
 
 function Learning() {
   return (
-    <div className="flex w-full flex-col flex-wrap gap-5 p-1 text-xs md:flex-row md:px-52">
+    <div className="flex w-full flex-col flex-wrap gap-5 p-1 text-xs md:px-52 lg:flex-row">
       {studyList.map((item) => {
         const Icon = item.icon;
         return (
@@ -27,7 +27,7 @@ function Learning() {
               <Icon className="text-3xl" />
               <div className="text-start">
                 <p className="text-[15px] font-semibold">{item.title}</p>
-                <p className="text-light-text-secondary mt-1">
+                <p className="mt-1 text-light-text-secondary">
                   {item.duration.start} ~ {item.duration.end}
                 </p>
                 <span className="mt-2 inline-block rounded border-[1px] border-gray-400 p-1">

@@ -12,7 +12,7 @@ const ProfileCard = () => {
     { title: "Name", content: "오장훈" },
     { title: "Age", content: "1995.02.20" },
     { title: "Phone", content: "010-8567-4105" },
-    { title: "E-mail", content: "ojh4105@naver.com" },
+    { title: "E-mail", content: "ojh9502@gmail.com" },
   ];
   return (
     <div className="flip-card">
@@ -62,7 +62,7 @@ const ProfileCard = () => {
                   <td className="font-extrabold text-accent-hover">
                     {item.title}
                   </td>
-                  <td className="py-2 md:px-3">{item.content}</td>
+                  <td className="px-3 py-2">{item.content}</td>
                 </tr>
               );
             })}

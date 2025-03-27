@@ -1,5 +1,5 @@
 // node modules
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // components
 import Navbar from "../Navbar";
@@ -11,20 +11,39 @@ import { IoMdClose } from "react-icons/io";
 
 function Header() {
   const [navOpen, setNavOpen] = useState(false);
+  const [isScroll, setIsScroll] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header>
+    <header
+      className={`fixed left-0 top-0 z-40 flex w-full items-center transition-[background-color,height] duration-300 ${isScroll ? "bg-primary h-16 border-b-[1px] border-gray-300 shadow-sm dark:border-gray-800 lg:h-[4.5rem]" : "h-20 bg-transparent"}`}
+    >
       <div className="mx-auto flex w-full max-w-screen-2xl items-center justify-between px-4 md:grid md:grid-cols-[1fr,4fr] md:px-6">
         {/* Logo 영역 */}
         <h1>
           <a href="/" className="logo flex items-center justify-center gap-3">
             <img
-              src="/assets/logo_dev-oh.png"
-              width={36}
-              height={36}
+              src="/assets/logo_dev-oh.ico"
+              width={32}
+              height={32}
               alt="dev-oh logo"
+              className="h-8 w-8 rounded-lg"
             />
-            <h4>dev-oh</h4>
+            <span className="text-[22px] font-bold">dev-oh</span>
           </a>
         </h1>
 
