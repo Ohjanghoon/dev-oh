@@ -1,5 +1,6 @@
 // node modules
 import { useEffect, useState } from "react";
+import { Img } from "react-image";
 
 // components
 import Navbar from "../Navbar";
@@ -36,7 +37,7 @@ function Header() {
         {/* Logo 영역 */}
         <h1>
           <a href="/" className="logo flex items-center justify-center gap-3">
-            <img
+            <Img
               src="/assets/logo_dev-oh.ico"
               width={32}
               height={32}
@@ -51,6 +52,7 @@ function Header() {
         <div className="flex items-center gap-3 md:grid md:w-full md:grid-cols-[3fr,1fr]">
           <div className="relative order-3 rounded-xl md:order-2 md:justify-self-center">
             <button
+              aria-label="mobile_nav_hamburger_button"
               className="neumorphism-btn grid h-10 w-10 place-items-center rounded-xl md:hidden"
               onClick={() => setNavOpen((prev) => !prev)}
             >

@@ -40,11 +40,6 @@ function ProjectCard({ data: item, handleDialog, handleSetData }: CardProps) {
       <Icon className="text-5xl text-accent-hover/50 group-hover:text-accent-hover group-hover:transition-all group-hover:duration-[0.4s]" />
 
       {/* 이미지 영역 */}
-      {/* <img
-        src={item.thumbnail}
-        alt=""
-        className="h-full w-full rounded-xl object-fill md:max-h-[180px]"
-      /> */}
       <h5 className="h5 mt-5">{item.title}</h5>
       <p className="mt-1 text-sm text-light-text-secondary">
         {item.duration.start} ~ {item.duration.end}

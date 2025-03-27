@@ -36,6 +36,7 @@ function ThemeControl() {
 
   return (
     <button
+      aria-label="theme_control_button"
       className={`${themeClass} justify-self-end p-2 transition-all hover:rotate-[-30deg]`}
       onClick={themeHandler}
     >

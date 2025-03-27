@@ -4,6 +4,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@radix-ui/react-tooltip";
+import { Img } from "react-image";
 
 // data
 import { skillList } from "../../data/experienceData";
@@ -35,8 +36,9 @@ function Skill() {
                                 className="rounded-lg bg-[#f3f4f6] p-1 dark:bg-[#ffffff15]"
                               />
                             ) : (
-                              <img
+                              <Img
                                 className="h-[36px] w-[36px] rounded-lg bg-[#f3f4f6] p-1 dark:bg-[#ffffff15] sm:h-[60px] sm:w-[60px] md:h-[30px] md:w-[30px]"
+                                alt={`${skill.name} logo`}
                                 src={skill.icon}
                               />
                             )}

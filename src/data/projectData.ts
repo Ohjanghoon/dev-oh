@@ -74,15 +74,17 @@ export const projectList: ProjectDTO[] = [
         },
         liveDemoUrl: {
           available: true,
-          url: "",
+          url: "https://oh-note.vercel.app",
           expression: "",
         },
         thumbnail: "",
         screenshots: [
-          "personal/personal_project_01_01.png",
-          "personal/personal_project_01_02.png",
-          "personal/personal_project_01_03.png",
-          "personal/personal_project_01_04.png",
+          "personal/personal_project_02_01.png",
+          "personal/personal_project_02_02.png",
+          "personal/personal_project_02_03.png",
+          "personal/personal_project_02_04.png",
+          "personal/personal_project_02_05.png",
+          "personal/personal_project_02_06.png",
         ],
       },
       // dev-oh(24.12 ~ 25.02)

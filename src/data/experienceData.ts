@@ -20,7 +20,6 @@ import {
   SiSpring,
   SiOracle,
   SiRedux,
-  SiVite,
   SiGitlab,
   SiNotion,
   SiMongodb,

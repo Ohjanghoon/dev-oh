@@ -3,6 +3,7 @@ import { AnimatePresence } from "motion/react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
+import { Img } from "react-image";
 
 // icons
 import {
@@ -101,12 +102,14 @@ function DetailDialog({ data: item, handleOpenDialog }: Props) {
                   >
                     {/* 슬라이더 버튼 영역 */}
                     <button
+                      aria-label="slide_left_button"
                       className="absolute left-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-zinc-50/70 p-2 text-accent-hover hover:bg-zinc-50"
                       id="custom-prev"
                     >
                       <IoIosArrowBack className="md:size-5" />
                     </button>
                     <button
+                      aria-label="slide_right_button"
                       className="absolute right-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/70 p-2 text-accent-hover hover:bg-zinc-50"
                       id="custom-next"
                     >
@@ -119,9 +122,10 @@ function DetailDialog({ data: item, handleOpenDialog }: Props) {
                           key={"screenshot" + index}
                           className="h-full bg-black/20"
                         >
-                          <img
+                          <Img
+                            loading="lazy"
                             src={`/assets/images/projects/${screenshot}`}
-                            alt=""
+                            alt={`${screenshot}`}
                             className="h-full w-full border-[0.5px] border-black object-cover object-top sm:h-[400px]"
                           />
                         </SwiperSlide>
@@ -268,6 +272,7 @@ function DetailDialog({ data: item, handleOpenDialog }: Props) {
 
           {/* 닫기 버튼 영역 */}
           <button
+            aria-label="dialog_close_button"
             className="absolute right-3 top-3 text-3xl hover:text-accent-hover"
             onClick={onClose}
           >

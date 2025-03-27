@@ -60,7 +60,10 @@ function Hero() {
               href="/assets/resume/경력기술서_오장훈.pdf"
               download="경력기술서_오장훈.pdf"
             >
-              <button className="flex items-center gap-2 rounded-[6rem] bg-gradient-to-br from-accent/50 to-cyan-400/60 px-8 py-5 uppercase text-white">
+              <button
+                aria-label="resume_download_button"
+                className="flex items-center gap-2 rounded-[6rem] bg-gradient-to-br from-accent/50 to-cyan-400/60 px-8 py-5 uppercase text-white"
+              >
                 <span className="text-[11px] xs:text-[13px] md:text-base">
                   경력기술서 보기
                 </span>

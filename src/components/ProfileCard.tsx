@@ -1,6 +1,7 @@
 // node modules
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Img } from "react-image";
 
 // icons
 import { BsPhoneFlip } from "react-icons/bs";
@@ -23,9 +24,10 @@ const ProfileCard = () => {
         className="flip-card-front flex h-full w-full flex-col items-center justify-center gap-6 rounded-3xl"
       >
         <div>
-          <img
+          <Img
+            loading="lazy"
             src="/assets/dev-oh profile.png"
-            alt="Ohjanghoon"
+            alt="Ohjanghoon profile image"
             className="h-52 w-full lg:h-72"
           />
         </div>
