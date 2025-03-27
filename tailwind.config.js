@@ -27,7 +27,7 @@ export default {
           gradient: "#96adcd",
           text: {
             DEFAULT: "#374151",
-            secondary: "#6b7280",
+            secondary: "#4b5563",
             neutral: "#9ca3af",
             light: "#fafafa",
             dark: "#1c1c22",
