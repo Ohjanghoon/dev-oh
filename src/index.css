@@ -14,7 +14,7 @@
     @apply h-full w-full;
   }
   body {
-    @apply bg-primary text-primary h-screen font-jetbrains text-base leading-loose tracking-tight transition-colors duration-300 ease-out;
+    @apply bg-primary text-primary font-pretendard h-screen text-base leading-loose tracking-wide transition-colors duration-300 ease-out;
   }
 
   footer {

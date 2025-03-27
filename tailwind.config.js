@@ -18,6 +18,7 @@ export default {
         sans: ["Inter", "sans-serif"],
         gmarket: ["'Gmarket Sans'", "sans-serif"],
         jetbrains: ["'jetBrains Mono'", "sans-serif"],
+        pretendard: ["'Pretendard'", "sans-serif"],
       },
       colors: {
         light: {
@@ -39,7 +40,7 @@ export default {
           surface: "#23232a",
           gradient: "#2b3a55",
           text: {
-            DEFAULT: "#e5e7eb",
+            DEFAULT: "#d4d4d8",
             dark: "#1c1c22",
           },
         },
