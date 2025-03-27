@@ -14,7 +14,7 @@
     @apply h-full w-full;
   }
   body {
-    @apply bg-primary text-primary font-pretendard h-screen text-base leading-loose tracking-wide transition-colors duration-300 ease-out;
+    @apply bg-primary text-primary h-screen font-pretendard text-base leading-loose tracking-wide transition-colors duration-300 ease-out;
   }
 
   footer {
@@ -39,6 +39,58 @@
   h6 {
     @apply text-[16px] font-semibold leading-[1.1] xl:text-[17px];
   }
+}
+
+/* ------------------------------- *\
+ * fonts
+\* ------------------------------- */
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-ExtraLight.woff2") format("woff2");
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-Light.woff2") format("woff2");
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-Thin.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
 }
 
 /* ------------------------------- *\

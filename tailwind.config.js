@@ -15,9 +15,6 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        gmarket: ["'Gmarket Sans'", "sans-serif"],
-        jetbrains: ["'jetBrains Mono'", "sans-serif"],
         pretendard: ["'Pretendard'", "sans-serif"],
       },
       colors: {
