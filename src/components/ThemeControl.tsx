@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/store";
@@ -24,21 +24,18 @@ function ThemeControl() {
     }
   };
 
-  const [themeClass, setThemeClass] = useState<string>("");
-
   useEffect(() => {
     if (themeMode === "light") {
       dispatch(lightMode());
-      setThemeClass("bg-white/20 ring-gray-400");
     } else {
       dispatch(darkMode());
-      setThemeClass("bg-black/20 ring-gray-100");
     }
   }, [themeMode]);
 
   return (
     <button
-      className={`${themeClass} justify-self-end rounded-[50%] p-2 ring-1 transition-all hover:rounded-xl`}
+      aria-label="theme_control_button"
+      className="justify-self-end p-2 transition-all hover:rotate-[-30deg]"
       onClick={themeHandler}
     >
       {themeMode === "light" ? (

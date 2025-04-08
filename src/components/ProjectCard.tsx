@@ -40,23 +40,18 @@ function ProjectCard({ data: item, handleDialog, handleSetData }: CardProps) {
       <Icon className="text-5xl text-accent-hover/50 group-hover:text-accent-hover group-hover:transition-all group-hover:duration-[0.4s]" />
 
       {/* 이미지 영역 */}
-      {/* <img
-        src={item.thumbnail}
-        alt=""
-        className="h-full w-full rounded-xl object-fill md:max-h-[180px]"
-      /> */}
-      <h5 className="h5 mt-5 tracking-tight">{item.title}</h5>
-      <p className="text-light-text-secondary mt-1 text-sm">
+      <h5 className="h5 mt-5">{item.title}</h5>
+      <p className="mt-1 text-sm text-light-text-secondary">
         {item.duration.start} ~ {item.duration.end}
       </p>
-      <p className="text-light-text-secondary my-5 line-clamp-3 overflow-hidden text-ellipsis text-sm">
+      <p className="my-5 line-clamp-3 overflow-hidden text-ellipsis text-sm text-light-text-secondary">
         {item.description}
       </p>
       <div className="mt-auto flex flex-wrap gap-2 text-xs">
         {item.technologies.slice(0, 3).map((tech, index) => (
           <span
             key={index}
-            className="group-hover:text-light-text-dark rounded border-[1px] border-[#3b82f6] px-2 py-1 group-hover:bg-white/80 group-hover:transition-all group-hover:delay-100"
+            className="rounded border-[1px] border-[#3b82f6] px-2 py-1 group-hover:bg-white/80 group-hover:text-light-text-dark group-hover:transition-all group-hover:delay-100"
           >
             {tech}
           </span>

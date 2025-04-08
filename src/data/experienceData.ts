@@ -20,13 +20,12 @@ import {
   SiSpring,
   SiOracle,
   SiRedux,
-  SiVite,
   SiGitlab,
   SiNotion,
   SiMongodb,
+  SiSupabase,
 } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc";
-import { PiSlackLogoFill } from "react-icons/pi";
 
 // types
 import {
@@ -161,11 +160,10 @@ export const skillList: SkillDTO[] = [
         color: "#61DAFB",
       },
       {
-        name: "Angular",
-        icon: RiAngularjsFill,
-        color: "#DD0031",
+        name: "Next.js",
+        icon: RiNextjsFill,
+        color: "#000000",
       },
-
       {
         name: "TailwindCSS",
         icon: RiTailwindCssFill,
@@ -177,14 +175,9 @@ export const skillList: SkillDTO[] = [
         color: "#764ABC",
       },
       {
-        name: "Next.js",
-        icon: RiNextjsFill,
-        color: "#000000",
-      },
-      {
-        name: "ViteJS",
-        icon: SiVite,
-        color: "#646CFF",
+        name: "Angular",
+        icon: RiAngularjsFill,
+        color: "#DD0031",
       },
     ],
   },
@@ -196,6 +189,11 @@ export const skillList: SkillDTO[] = [
         name: "Spring",
         icon: SiSpring,
         color: "#6DB33F",
+      },
+      {
+        name: "Supabase",
+        icon: SiSupabase,
+        color: "#3FCF8E",
       },
       {
         name: "Oracle",
@@ -237,11 +235,6 @@ export const skillList: SkillDTO[] = [
         name: "Google Workspace",
         icon: FcGoogle,
         color: "",
-      },
-      {
-        name: "Slack",
-        icon: PiSlackLogoFill,
-        color: "#4A154B",
       },
     ],
   },

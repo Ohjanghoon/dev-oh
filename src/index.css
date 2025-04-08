@@ -14,10 +14,7 @@
     @apply h-full w-full;
   }
   body {
-    @apply bg-primary text-primary h-screen font-jetbrains text-base leading-loose tracking-tight transition-colors duration-300 ease-out;
-  }
-  header {
-    @apply fixed left-0 top-0 z-40 flex h-24 w-full items-center;
+    @apply bg-primary text-primary h-screen font-pretendard text-base leading-loose tracking-wide transition-colors duration-300 ease-out;
   }
 
   footer {
@@ -45,6 +42,58 @@
 }
 
 /* ------------------------------- *\
+ * fonts
+\* ------------------------------- */
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-ExtraLight.woff2") format("woff2");
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-Light.woff2") format("woff2");
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-Thin.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+/* ------------------------------- *\
  * components
 \* ------------------------------- */
 @layer components {
@@ -58,7 +107,7 @@
     @apply bg-light-surface dark:bg-dark-surface;
   }
   .bg-gradient {
-    @apply from-light-primary to-light-gradient dark:from-dark-primary dark:to-dark-gradient h-full w-full bg-gradient-to-br;
+    @apply h-full w-full bg-gradient-to-br from-light-primary to-light-gradient dark:from-dark-primary dark:to-dark-gradient;
   }
 
   .text-primary {
@@ -83,7 +132,7 @@
  * navbar
 \* ------------------------------- */
 .navbar {
-  @apply invisible absolute right-0 top-full isolate mt-2 min-w-40 scale-90 rounded-2xl bg-gray-500/10 p-2 opacity-0 ring-1 ring-inset ring-zinc-50/5 blur-sm backdrop-blur-2xl transition-[opacity,transform,filter] md:visible md:static md:mt-0 md:flex md:scale-100 md:items-center md:opacity-100 md:blur-0;
+  @apply invisible absolute right-0 top-full isolate mt-4 min-w-40 scale-90 rounded-xl bg-gray-500/10 px-2 py-[0.375rem] opacity-0 ring-1 ring-inset ring-zinc-50/5 blur-sm backdrop-blur-2xl transition-[opacity,transform,filter] md:visible md:static md:mt-0 md:flex md:scale-100 md:items-center md:opacity-100 md:blur-0 xl:mt-2;
 }
 
 .navbar.active {
@@ -91,7 +140,7 @@
 }
 
 .nav-link {
-  @apply hover:text-light-text-dark hover:dark:text-dark-text grid h-9 items-center px-4 text-sm font-medium tracking-wide text-gray-500 transition-colors;
+  @apply grid h-9 items-center px-4 text-sm font-medium tracking-wide text-gray-500 transition-colors hover:text-light-text-dark hover:dark:text-dark-text;
 }
 
 .nav-link.active {
@@ -120,7 +169,7 @@
   @apply shadow-neumorphism-pressed transition-all duration-500;
 }
 .neumorphism-btn-selected {
-  @apply data-[selected]:shadow-light-neumorphism-pressed data-[selected]:dark:shadow-dark-neumorphism-pressed data-[selected]:text-accent-hover/80;
+  @apply data-[selected]:text-accent-hover/80 data-[selected]:shadow-light-neumorphism-pressed data-[selected]:dark:shadow-dark-neumorphism-pressed;
 }
 
 /* ------------------------------- *\
@@ -143,7 +192,7 @@
 
 .flip-card-front,
 .flip-card-back {
-  @apply backface-hidden absolute left-0 top-0 rounded-3xl border border-neutral-600 bg-white/50 p-10 transition-[background-color] duration-500 ease-in-out dark:bg-black/40;
+  @apply backface-hidden absolute left-0 top-0 rounded-3xl border border-neutral-600 bg-white/50 p-5 transition-[background-color] duration-500 ease-in-out dark:bg-black/40 lg:p-10;
 }
 
 /* ------------------------------- *\

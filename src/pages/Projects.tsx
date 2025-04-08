@@ -68,7 +68,7 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.1 }}
         >
           <TabGroup className="p-1 md:mx-20">
-            <TabList className="grid grid-cols-2 place-items-center gap-5 px-10 md:grid-cols-[repeat(4,_minmax(100px,_1fr))]">
+            <TabList className="grid grid-cols-2 place-items-center gap-5 px-10 lg:grid-cols-[repeat(4,_minmax(100px,_1fr))]">
               <Tab
                 value="all"
                 className="neumorphism-btn-selected neumorphism-btn w-full rounded-xl p-3 text-sm/6 focus:outline-none"

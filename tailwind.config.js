@@ -15,9 +15,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        gmarket: ["'Gmarket Sans'", "sans-serif"],
-        jetbrains: ["'jetBrains Mono'", "sans-serif"],
+        pretendard: ["'Pretendard'", "sans-serif"],
       },
       colors: {
         light: {
@@ -26,7 +24,7 @@ export default {
           gradient: "#96adcd",
           text: {
             DEFAULT: "#374151",
-            secondary: "#6b7280",
+            secondary: "#4b5563",
             neutral: "#9ca3af",
             light: "#fafafa",
             dark: "#1c1c22",
@@ -39,7 +37,7 @@ export default {
           surface: "#23232a",
           gradient: "#2b3a55",
           text: {
-            DEFAULT: "#e5e7eb",
+            DEFAULT: "#d4d4d8",
             dark: "#1c1c22",
           },
         },

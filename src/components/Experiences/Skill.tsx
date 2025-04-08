@@ -4,6 +4,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@radix-ui/react-tooltip";
+import { Img } from "react-image";
 
 // data
 import { skillList } from "../../data/experienceData";
@@ -22,18 +23,25 @@ function Skill() {
               <h6>{item.category}</h6>
               <ul className="flex flex-wrap items-center gap-2">
                 {item.list.map((skill, index) => {
-                  const Icon = skill.icon;
                   return (
                     <li key={index}>
                       <TooltipProvider delayDuration={50} key={index}>
                         <Tooltip>
                           <TooltipTrigger className="bg-primary neumorphism-card group flex cursor-default items-center justify-center rounded-xl p-2 text-4xl sm:text-6xl md:text-3xl">
-                            <Icon
-                              style={{
-                                color: skill.color,
-                              }}
-                              className="rounded-lg bg-white p-1"
-                            />
+                            {typeof skill.icon !== "string" ? (
+                              <skill.icon
+                                style={{
+                                  color: skill.color,
+                                }}
+                                className="rounded-lg bg-[#f3f4f6] p-1 dark:bg-[#ffffff15]"
+                              />
+                            ) : (
+                              <Img
+                                className="h-[36px] w-[36px] rounded-lg bg-[#f3f4f6] p-1 dark:bg-[#ffffff15] sm:h-[60px] sm:w-[60px] md:h-[30px] md:w-[30px]"
+                                alt={`${skill.name} logo`}
+                                src={skill.icon}
+                              />
+                            )}
                             <span className="ml-2 hidden text-xs md:block">
                               {skill.name}
                             </span>

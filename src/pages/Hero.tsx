@@ -26,7 +26,7 @@ function Hero() {
           className="z-10 order-2 p-4 md:order-1"
         >
           {/* Home 설명__프로필 영역 */}
-          <div className="text-light-text-secondary flex items-center gap-1.5 pt-5 text-sm tracking-wide">
+          <div className="flex items-center gap-1.5 pt-5 text-sm tracking-wide text-light-text-secondary">
             <span className="relative h-3 w-3 rounded-full bg-emerald-400">
               <span className="absolute inset-0 animate-ping rounded-full bg-emerald-400"></span>
             </span>
@@ -47,29 +47,34 @@ function Hero() {
                 JangHoon Oh
               </motion.p>
             </h1>
-            <p className="text-light-text-secondary mt-5 max-w-[400px] whitespace-break-spaces break-keep tracking-tighter">
-              "안녕하세요. 소통하는 웹 프론트엔드 개발자 오장훈입니다.
-              <br />
-              해당 사이트는 React 기반으로 구현된 개인 포트폴리오 사이트입니다."
-            </p>
+            <div className="mt-5 max-w-[400px] text-light-text-secondary">
+              <p>"안녕하세요. 소통하는 웹 프론트엔드 개발자 오장훈입니다.</p>
+              <p>
+                해당 사이트는 React 기반으로 구현된 개인 포트폴리오
+                사이트입니다."
+              </p>
+            </div>
           </div>
 
           {/* btn & socials */}
-          <div className="mt-8 flex items-center justify-center gap-12">
+          <div className="mt-8 flex flex-col items-center justify-center gap-8 md:flex-row md:gap-12">
             <a
-              href="/assets/resume/경력기술서_오장훈.pdf"
-              download="경력기술서_오장훈.pdf"
+              title="resume_download_link"
+              href="/assets/resume/오장훈.pdf"
+              download="오장훈.pdf"
             >
-              <button className="neumorphism-btn flex items-center gap-2 rounded-[6rem] px-8 py-5 font-semibold uppercase">
-                <span className="text-[10px] xs:text-[11px] sm:text-base">
-                  경력기술서 다운로드
+              <button
+                aria-label="resume_download_button"
+                className="flex items-center gap-2 rounded-[6rem] bg-gradient-to-br from-accent/50 to-cyan-400/60 px-8 py-5 uppercase text-white"
+              >
+                <span className="text-[11px] xs:text-[13px] md:text-base">
+                  PDF로 보기
                 </span>
-                <FiDownload className="text-secandary text-xl" />
+                <FiDownload className="text-secandary md:text-xl" />
               </button>
             </a>
-            <div className="">
-              <Social />
-            </div>
+
+            <Social />
           </div>
           {/* <div className="flex items-center gap-3">
       <Social />

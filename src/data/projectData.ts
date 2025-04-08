@@ -11,6 +11,7 @@ import { RiShoppingBag3Fill } from "react-icons/ri";
 import { FaHtml5, FaReact } from "react-icons/fa";
 import { BsPersonBadgeFill } from "react-icons/bs";
 import { SiNextdotjs } from "react-icons/si";
+import { LuNotebookPen } from "react-icons/lu";
 
 import { ProjectDTO } from "../types/projectTypes";
 
@@ -18,22 +19,105 @@ export const projectList: ProjectDTO[] = [
   {
     category: "Personal",
     items: [
+      // oh-note(25.03 ~ 25.03)
+      {
+        id: "personal/personal_project_06",
+        title: "oh-note 블로그",
+        type: {
+          name: "개인 프로젝트",
+          color: "bg-emerald-300",
+        },
+        description: `해당 프로젝트는 Next.js를 접하며 공부한 내용을 실제로 적용해보고, 학습한 개발 지식을 기록하고 공유하기 위한 개인 기술 블로그 프로젝트입니다. 블로그 프로젝트를 실제 운영가능한 서비스를 구축하고, 배포 및 유지보수 과정을 경험하며, 시스템 설계와 기능 확장 경험에 중점을 둔 프로젝트입니다.`,
+        technologies: [
+          "Next.js",
+          "TypeScript",
+          "Redux Toolkit",
+          "TailwindCSS",
+          "Supabase",
+          "Framer Motion",
+          "Vercel",
+          "GitHub",
+        ],
+        icon: LuNotebookPen,
+        role: "Frontend Developer",
+        duration: {
+          start: "2025.03",
+          end: "2025.03",
+        },
+        teamSize: 1,
+        responsibilities: [
+          {
+            title: "Markdown 기반의 게시글 작성 및 렌더링",
+            content: [
+              "@next/mdx를 활용하여 Markdown으로 작성된 MDX파일 렌더링 적용",
+              "MDX 파일 내부에 컴포넌트를 사용하여 커스텀 요소 추가(코드블럭, 콜아웃 등)",
+              "파일 시스템을 통해 MDX 파일을 읽어오고, 각 파일명에서 slug를 추출하여 동적 라우팅 제공",
+            ],
+          },
+          {
+            title: "데이터베이스 및 상호작용 기능 추가",
+            content: [
+              `게시글 좋아요(likes) 기능
+               - localStorage의 clientToken을 생성을 통한 익명의 좋아요 기능 처리(중복 좋아요 방지)
+               - Supabase DB에 좋아요 추가/삭제 기능`,
+              `익명 방명록 기능
+               - 선택적으로 닉네임을 기입할 수 있도록, DB 테이블 설계
+               - 익명 방명록 새로고침 없이 자동 실시간 업데이트 기능(Supabase Realtime 활용)`,
+            ],
+          },
+          {
+            title: "반응형 UI 및 다크 모드 지원",
+            content: [
+              "CSS Grid 시스템 레이아웃을 활용하여 반응형 레이아웃 구성",
+              "Tailwind CSS의 프리픽스(xl:, dark: 등)를 활용하여 다크 모드와 반응형 스타일 적용",
+            ],
+          },
+        ],
+        achievements: [
+          `해당 프로젝트는 마크다운 기반의 게시글을 효과적으로 관리하고자 MDX를 도입하고 콘텐츠 렌더링 구조를 설계해 보았습니다. 단순 텍스트를 보여주는 것이 아닌, 코드 블럭이나 콜아웃과 같은 커스텀 컴포넌트를 마크다운에 삽입함으로써 콘텐츠의 표현력을 높이고, 기술 블로그로서의 활용성을 확장할 수 있었습니다.
+
+정적 블로그이지만, Supabase를 활용하여 사용자와의 상호작용이 가능한 좋아요 기능과 익명 방명록 기능도 구현하며, 실시간 데이터 처리 흐름에 대한 이해도를 함께 쌓을 수 있었습니다.
+
+UI 측면에서는 Tailwind CSS와 CSS Grid 시스템을 적극적으로 활용하여 반응형 디자인을 구성하였고, 다크 모드 지원을 통해 다양한 환경에서도 일관된 사용자 경험을 제공하고자 노력했습니다. 프리픽스 유틸리티를 적극 활용하며, 미디어 쿼리와 다크 모드를 Tailwind에서 어떻게 효율적으로 구현하는지 알 수 있었습니다.
+
+이러한 과정들을 통해 정적 사이트에서 동적인 사용자 경험 설계와 마크다운 콘텐츠 구성부터 UI/UX 구현까지 프론트엔드 전반의 흐름을 스스로 설계하고 구축해보는 값진 경험을 할 수 있었습니다.`,
+        ],
+
+        repositoryUrl: {
+          available: true,
+          url: "https://github.com/Ohjanghoon/oh-note",
+          expression: "",
+        },
+        liveDemoUrl: {
+          available: true,
+          url: "https://oh-note.vercel.app",
+          expression: "",
+        },
+        thumbnail: "",
+        screenshots: [
+          "personal/personal_project_02_01.png",
+          "personal/personal_project_02_02.png",
+          "personal/personal_project_02_03.png",
+          "personal/personal_project_02_04.png",
+          "personal/personal_project_02_05.png",
+          "personal/personal_project_02_06.png",
+        ],
+      },
       // dev-oh(24.12 ~ 25.02)
       {
-        id: "personal_project_05",
+        id: "personal/personal_project_05",
         title: "dev-oh 포트폴리오",
         type: {
           name: "개인 프로젝트",
           color: "bg-emerald-300",
         },
         description:
-          "이 프로젝트는 학습한 기술을 적용하고 개발자로서의 역량을 효과적으로 보여주기 위해 React와 TailwindCSS를 활용하여 구축되었으며, 프로젝트 경험과 기술 스택을 정리하는 데 목적을 두고 있습니다. ",
+          "해당 프로젝트는 프론트엔드 개발자로서의 역량을 보여주기 위해 React와 TailwindCSS를 활용하여 구축된 정적 사이트로, 프로젝트 경험과 기술 스택을 정리하는 데 목적을 두고 있습니다.",
         technologies: [
           "React",
           "TypeScript",
           "TailwindCSS",
           "Framer Motion",
-          "ViteJS",
           "Firebase",
           "GitHub",
         ],
@@ -46,24 +130,28 @@ export const projectList: ProjectDTO[] = [
         teamSize: 1,
         responsibilities: [
           {
-            title: "성능 최적화 및 UI/UX 작업",
+            title: "UI/UX 작업",
             content: [
-              "Vite 활용 - 빠른 번들링과 최적화된 로딩 성능 제공",
-              "React Router 사용 - SPA(Single Page Application) 구조 설계",
-              "TailwindCSS 적용 - 효율적인 스타일 관리 및 UI의 일관성 유지, 반응형/다크모드 제공",
-              "Framer Motion 활용 - 메인 페이지에 은하수가 떨어지는 듯한 무빙 도트 애니메이션 적용",
+              `TailwindCSS 적용
+              - 효율적인 스타일 관리 및 UI의 일관성 유지, 반응형/다크모드 제공`,
+              `Framer Motion 활용
+              - 메인 페이지에 은하수가 떨어지는 듯한 무빙 도트 애니메이션 적용`,
             ],
           },
           {
             title: "다크 모드 기능",
             content: [
-              "redux-toolkit을 활용하여 테마 상태를 전역으로 관리",
+              "Redux Toolkit을 활용하여 테마 상태를 전역으로 관리",
               "localStorage를 이용해 사용자의 다크 모드 설정을 저장하여 새로고침 후에도 유지",
               "TailwindCSS의 다크 모드 기능과 연계하여 최적화된 UI 제공",
             ],
           },
         ],
-        achievements: ["", ""],
+        achievements: [
+          `해당 프로젝트를 통해 직접 사이트를 제작하며 React의 기본 사용법을 익히고, TailwindCSS를 통한 효율성과 생산성을 직접 체감할 수 있었습니다. 나아가, UX적인 요소에 대해서도 고민하며, 사용자 경험을 고려한 인터페이스 설계의 중요성을 배울 수 있었습니다.
+          
+          추가적으로, 저의 포트폴리오 사이트는 테마 전환과 같은 간단한 상태만을 관리하는 정적 사이트로 Context API만으로도 충분했지만, Redux Toolkit의 기본 사용법을 익히고자 도입하여 직접 상태 관리 도구를 적용해보는 경험을 할 수 있었습니다.`,
+        ],
 
         repositoryUrl: {
           available: true,
@@ -77,15 +165,15 @@ export const projectList: ProjectDTO[] = [
         },
         thumbnail: "",
         screenshots: [
-          "personal_project_01_01.png",
-          "personal_project_01_02.png",
-          "personal_project_01_03.png",
-          "personal_project_01_04.png",
+          "personal/personal_project_01_01.png",
+          "personal/personal_project_01_02.png",
+          "personal/personal_project_01_03.png",
+          "personal/personal_project_01_04.png",
         ],
       },
       /*// unsplash clone project(24.11 ~ 24.12)
       {
-        id: "personal_project_04",
+        id: "personal/personal_project_04",
         title: "unsplash clone",
         type: {
           name: "개인 프로젝트",
@@ -142,7 +230,7 @@ export const projectList: ProjectDTO[] = [
       },
       // nextJS/TailwindCSS learn(24.10 ~ 24.10)
       {
-        id: "personal_project_03",
+        id: "personal/personal_project_03",
         title: "nextJS/TailwindCSS learn",
         type: {
           name: "개인 프로젝트",
@@ -175,7 +263,7 @@ export const projectList: ProjectDTO[] = [
       },
       // nextJS learn(24.09 ~ 24.10)
       {
-        id: "personal_project_02",
+        id: "personal/personal_project_02",
         title: "nextJS learn",
         type: {
           name: "개인 프로젝트",
@@ -208,7 +296,7 @@ export const projectList: ProjectDTO[] = [
       },
       // react learn(24.09 ~ 24.09)
       {
-        id: "personal_project_01",
+        id: "personal/personal_project_01",
         title: "reactJS learn",
         type: {
           name: "개인 프로젝트",
@@ -242,11 +330,11 @@ export const projectList: ProjectDTO[] = [
     ],
   },
   {
-    category: "Corporate",
+    category: "Work",
     items: [
       // 북한정보포털(24.01 ~ 24.09)
       {
-        id: "corporate_project_04",
+        id: "work_project_04",
         title: "북한정보포털",
         type: {
           name: "회사 프로젝트",
@@ -321,15 +409,15 @@ export const projectList: ProjectDTO[] = [
         },
         thumbnail: "project_05_01.png",
         screenshots: [
-          "corporate_project_05_01.png",
-          "corporate_project_05_02.png",
-          "corporate_project_05_03.png",
-          "corporate_project_05_04.png",
+          "work/work_project_05_01.png",
+          "work/work_project_05_02.png",
+          "work/work_project_05_03.png",
+          "work/work_project_05_04.png",
         ],
       },
       // KISTI (23.05 ~ 23.11)
       {
-        id: "corporate_project_03",
+        id: "work_project_03",
         title: "KISTI 가상실험실 메타버스",
         type: {
           name: "회사 프로젝트",
@@ -405,25 +493,25 @@ export const projectList: ProjectDTO[] = [
 
         thumbnail: "",
         screenshots: [
-          "corporate_project_03_01.png",
-          "corporate_project_03_02.png",
-          "corporate_project_03_03.png",
-          "corporate_project_03_04.png",
-          "corporate_project_03_05.png",
-          "corporate_project_03_06.png",
-          "corporate_project_03_07.png",
-          "corporate_project_03_08.png",
-          "corporate_project_03_09.png",
-          "corporate_project_03_10.png",
-          "corporate_project_03_11.png",
-          "corporate_project_03_12.png",
-          "corporate_project_03_13.png",
-          "corporate_project_03_14.png",
+          "work/work_project_03_01.png",
+          "work/work_project_03_02.png",
+          "work/work_project_03_03.png",
+          "work/work_project_03_04.png",
+          "work/work_project_03_05.png",
+          "work/work_project_03_06.png",
+          "work/work_project_03_07.png",
+          "work/work_project_03_08.png",
+          "work/work_project_03_09.png",
+          "work/work_project_03_10.png",
+          "work/work_project_03_11.png",
+          "work/work_project_03_12.png",
+          "work/work_project_03_13.png",
+          "work/work_project_03_14.png",
         ],
       },
       // DIGITAL TWIN (23.02 ~ 23.05)
       {
-        id: "corporate_project_02",
+        id: "work_project_02",
         title: "디지털 트윈 프로젝트",
         type: {
           name: "회사 프로젝트",
@@ -491,22 +579,19 @@ export const projectList: ProjectDTO[] = [
           expression:
             "해당 프로젝트는 사내 보안 정책에 따라 이미지와 Demo를 제공할 수 없는 점 양해 부탁드립니다.",
         },
-        thumbnail: "project_04_01.png",
-        screenshots: [
-          "corporate_project_02_01.png",
-          "corporate_project_02_02.png",
-        ],
+        thumbnail: "",
+        screenshots: [],
       },
       // AWS Serverless (22.12 ~ 23.02)
       {
-        id: "corporate_project_01",
+        id: "work_project_01",
         title: "AWS 서버리스 상품 판매 플랫폼",
         type: {
           name: "회사 프로젝트",
           color: "bg-orange-300",
         },
-        description:
-          "입사 초기 진행한 프로젝트로, AWS 기반 Serverless 아키텍처를 활용한 상품 판매 플랫폼을 개발하였습니다. 서버 운영 부담을 줄이고 확장성을 극대화하기 위해 AWS Lambda, API Gateway, DynamoDB, S3 등 다양한 클라우드 서비스를 적용하였습니다.",
+        description: `입사 초기 진행한 프로젝트로, AWS 기반 Serverless 아키텍처를 활용한 상품 판매 플랫폼을 개발하였습니다.
+          서버 운영 부담을 줄이고 확장성을 극대화하기 위해 AWS Lambda, API Gateway, DynamoDB, S3 등 다양한 클라우드 서비스를 적용하였습니다.`,
         technologies: [
           "TypeScript",
           "JavaScript",
@@ -638,18 +723,18 @@ export const projectList: ProjectDTO[] = [
         },
         thumbnail: "",
         screenshots: [
-          "educational_project_03_01.png",
-          "educational_project_03_02.png",
-          "educational_project_03_03.png",
-          "educational_project_03_04.png",
-          "educational_project_03_05.png",
-          "educational_project_03_06.png",
-          "educational_project_03_07.png",
-          "educational_project_03_08.png",
-          "educational_project_03_09.png",
-          "educational_project_03_10.png",
-          "educational_project_03_11.png",
-          "educational_project_03_12.png",
+          "educational/educational_project_03_01.png",
+          "educational/educational_project_03_02.png",
+          "educational/educational_project_03_03.png",
+          "educational/educational_project_03_04.png",
+          "educational/educational_project_03_05.png",
+          "educational/educational_project_03_06.png",
+          "educational/educational_project_03_07.png",
+          "educational/educational_project_03_08.png",
+          "educational/educational_project_03_09.png",
+          "educational/educational_project_03_10.png",
+          "educational/educational_project_03_11.png",
+          "educational/educational_project_03_12.png",
         ],
       },
       // 주신사 프로젝트 (22.06 ~ 22.07)
@@ -717,14 +802,14 @@ export const projectList: ProjectDTO[] = [
         },
         thumbnail: "",
         screenshots: [
-          "educational_project_02_01.png",
-          "educational_project_02_02.png",
-          "educational_project_02_03.png",
-          "educational_project_02_04.png",
-          "educational_project_02_05.png",
-          "educational_project_02_06.png",
-          "educational_project_02_07.png",
-          "educational_project_02_08.png",
+          "educational/educational_project_02_01.png",
+          "educational/educational_project_02_02.png",
+          "educational/educational_project_02_03.png",
+          "educational/educational_project_02_04.png",
+          "educational/educational_project_02_05.png",
+          "educational/educational_project_02_06.png",
+          "educational/educational_project_02_07.png",
+          "educational/educational_project_02_08.png",
         ],
       },
       // HTML/CSS/JS 기초 프로젝트 (22.06 ~ 22.06)
@@ -784,10 +869,10 @@ export const projectList: ProjectDTO[] = [
         },
         thumbnail: "",
         screenshots: [
-          "educational_project_01_01.png",
-          "educational_project_01_02.png",
-          "educational_project_01_03.png",
-          "educational_project_01_04.png",
+          "educational/educational_project_01_01.png",
+          "educational/educational_project_01_02.png",
+          "educational/educational_project_01_03.png",
+          "educational/educational_project_01_04.png",
         ],
       },
     ],

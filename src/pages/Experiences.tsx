@@ -36,14 +36,14 @@ function Experiences() {
           variants={fadeIn("right", 0.6)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.1 }}
         >
           {experiencesList.map((experience) => {
             const Content = experience.content;
             return (
               <div
                 key={experience.id}
-                className="my-14 grid grid-cols-1 gap-[20px] p-3 last:mb-0 md:mx-20 lg:grid-cols-[1fr_2fr]"
+                className="my-10 grid grid-cols-1 gap-[20px] p-3 last:mb-0 md:mx-20 lg:grid-cols-[1fr_2fr]"
               >
                 <div className="w-full place-self-start px-3">
                   {/* 제목 영역 */}
@@ -52,7 +52,7 @@ function Experiences() {
                     <span className="absolute bottom-1 left-0 -z-10 h-[10px] w-full rounded-full bg-gradient-to-r from-accent-400"></span>
                   </h2>
                   {/* 제목 설명 영역 */}
-                  <p className="text-light-text-secondary my-2 w-full break-keep text-sm font-light tracking-tighter sm:text-base">
+                  <p className="my-2 w-full break-keep text-sm font-light text-light-text-secondary sm:text-base">
                     {experience.description}
                   </p>
                 </div>
