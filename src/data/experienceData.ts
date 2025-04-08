@@ -26,7 +26,6 @@ import {
   SiSupabase,
 } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc";
-import { PiSlackLogoFill } from "react-icons/pi";
 
 // types
 import {
