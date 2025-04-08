@@ -60,8 +60,8 @@ function Hero() {
           <div className="mt-8 flex flex-col items-center justify-center gap-8 md:flex-row md:gap-12">
             <a
               title="resume_download_link"
-              href="/assets/resume/경력기술서_오장훈.pdf"
-              download="경력기술서_오장훈.pdf"
+              href="/assets/resume/오장훈.pdf"
+              download="오장훈.pdf"
             >
               <button
                 aria-label="resume_download_button"
