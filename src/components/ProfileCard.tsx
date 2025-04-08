@@ -26,7 +26,7 @@ const ProfileCard = () => {
         <div>
           <Img
             loading="lazy"
-            src="/assets/dev-oh profile.png"
+            src="/assets/dev-oh profile.webp"
             alt="Ohjanghoon profile image"
             className="h-52 w-full lg:h-72"
           />

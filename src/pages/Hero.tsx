@@ -47,11 +47,13 @@ function Hero() {
                 JangHoon Oh
               </motion.p>
             </h1>
-            <p className="mt-5 max-w-[400px] break-all text-light-text-secondary">
-              "안녕하세요. 소통하는 웹 프론트엔드 개발자 오장훈입니다.
-              <br />
-              해당 사이트는 React 기반으로 구현된 개인 포트폴리오 사이트입니다."
-            </p>
+            <div className="mt-5 max-w-[400px] text-light-text-secondary">
+              <p>"안녕하세요. 소통하는 웹 프론트엔드 개발자 오장훈입니다.</p>
+              <p>
+                해당 사이트는 React 기반으로 구현된 개인 포트폴리오
+                사이트입니다."
+              </p>
+            </div>
           </div>
 
           {/* btn & socials */}
@@ -66,7 +68,7 @@ function Hero() {
                 className="flex items-center gap-2 rounded-[6rem] bg-gradient-to-br from-accent/50 to-cyan-400/60 px-8 py-5 uppercase text-white"
               >
                 <span className="text-[11px] xs:text-[13px] md:text-base">
-                  경력기술서 보기
+                  PDF로 보기
                 </span>
                 <FiDownload className="text-secandary md:text-xl" />
               </button>

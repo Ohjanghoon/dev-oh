@@ -27,12 +27,11 @@ export const projectList: ProjectDTO[] = [
           name: "개인 프로젝트",
           color: "bg-emerald-300",
         },
-        description: `해당 프로젝트는 Next.js를 학습하며 실제 운영가능한 서비스 개발 경험에 중점을 두고 있습니다.
-          단순한 학습을 넘어, 직접 사용할 서비스를 구축하고 배포 및 유지보수 등 여러 요소를 고민하여 설계하였습니다.
-          지속적으로 기능을 확장하고 발전시키며, 사용자 경험을 개선하고 성능 최적화를 진행하고 있습니다.`,
+        description: `해당 프로젝트는 Next.js를 접하며 공부한 내용을 실제로 적용해보고, 학습한 개발 지식을 기록하고 공유하기 위한 개인 기술 블로그 프로젝트입니다. 블로그 프로젝트를 실제 운영가능한 서비스를 구축하고, 배포 및 유지보수 과정을 경험하며, 시스템 설계와 기능 확장 경험에 중점을 둔 프로젝트입니다.`,
         technologies: [
           "Next.js",
           "TypeScript",
+          "Redux Toolkit",
           "TailwindCSS",
           "Supabase",
           "Framer Motion",
@@ -48,28 +47,45 @@ export const projectList: ProjectDTO[] = [
         teamSize: 1,
         responsibilities: [
           {
-            title: "성능 최적화 및 UI/UX 작업",
+            title: "Markdown 기반의 게시글 작성 및 렌더링",
             content: [
-              "Vite 활용 - 빠른 번들링과 최적화된 로딩 성능 제공",
-              "React Router 사용 - SPA(Single Page Application) 구조 설계",
-              "TailwindCSS 적용 - 효율적인 스타일 관리 및 UI의 일관성 유지, 반응형/다크모드 제공",
-              "Framer Motion 활용 - 메인 페이지에 은하수가 떨어지는 듯한 무빙 도트 애니메이션 적용",
+              "@next/mdx를 활용하여 Markdown으로 작성된 MDX파일 렌더링 적용",
+              "MDX 파일 내부에 컴포넌트를 사용하여 커스텀 요소 추가(코드블럭, 콜아웃 등)",
+              "파일 시스템을 통해 MDX 파일을 읽어오고, 각 파일명에서 slug를 추출하여 동적 라우팅 제공",
             ],
           },
           {
-            title: "다크 모드 기능",
+            title: "데이터베이스 및 상호작용 기능 추가",
             content: [
-              "redux-toolkit을 활용하여 테마 상태를 전역으로 관리",
-              "localStorage를 이용해 사용자의 다크 모드 설정을 저장하여 새로고침 후에도 유지",
-              "TailwindCSS의 다크 모드 기능과 연계하여 최적화된 UI 제공",
+              `게시글 좋아요(likes) 기능
+               - localStorage의 clientToken을 생성을 통한 익명의 좋아요 기능 처리(중복 좋아요 방지)
+               - Supabase DB에 좋아요 추가/삭제 기능`,
+              `익명 방명록 기능
+               - 선택적으로 닉네임을 기입할 수 있도록, DB 테이블 설계
+               - 익명 방명록 새로고침 없이 자동 실시간 업데이트 기능(Supabase Realtime 활용)`,
+            ],
+          },
+          {
+            title: "반응형 UI 및 다크 모드 지원",
+            content: [
+              "CSS Grid 시스템 레이아웃을 활용하여 반응형 레이아웃 구성",
+              "Tailwind CSS의 프리픽스(xl:, dark: 등)를 활용하여 다크 모드와 반응형 스타일 적용",
             ],
           },
         ],
-        achievements: ["", ""],
+        achievements: [
+          `해당 프로젝트는 마크다운 기반의 게시글을 효과적으로 관리하고자 MDX를 도입하고 콘텐츠 렌더링 구조를 설계해 보았습니다. 단순 텍스트를 보여주는 것이 아닌, 코드 블럭이나 콜아웃과 같은 커스텀 컴포넌트를 마크다운에 삽입함으로써 콘텐츠의 표현력을 높이고, 기술 블로그로서의 활용성을 확장할 수 있었습니다.
+
+정적 블로그이지만, Supabase를 활용하여 사용자와의 상호작용이 가능한 좋아요 기능과 익명 방명록 기능도 구현하며, 실시간 데이터 처리 흐름에 대한 이해도를 함께 쌓을 수 있었습니다.
+
+UI 측면에서는 Tailwind CSS와 CSS Grid 시스템을 적극적으로 활용하여 반응형 디자인을 구성하였고, 다크 모드 지원을 통해 다양한 환경에서도 일관된 사용자 경험을 제공하고자 노력했습니다. 프리픽스 유틸리티를 적극 활용하며, 미디어 쿼리와 다크 모드를 Tailwind에서 어떻게 효율적으로 구현하는지 알 수 있었습니다.
+
+이러한 과정들을 통해 정적 사이트에서 동적인 사용자 경험 설계와 마크다운 콘텐츠 구성부터 UI/UX 구현까지 프론트엔드 전반의 흐름을 스스로 설계하고 구축해보는 값진 경험을 할 수 있었습니다.`,
+        ],
 
         repositoryUrl: {
           available: true,
-          url: "https://github.com/Ohjanghoon/dev-oh",
+          url: "https://github.com/Ohjanghoon/oh-note",
           expression: "",
         },
         liveDemoUrl: {
@@ -96,13 +112,12 @@ export const projectList: ProjectDTO[] = [
           color: "bg-emerald-300",
         },
         description:
-          "이 프로젝트는 학습한 기술을 적용하고 개발자로서의 역량을 효과적으로 보여주기 위해 React와 TailwindCSS를 활용하여 구축되었으며, 프로젝트 경험과 기술 스택을 정리하는 데 목적을 두고 있습니다.",
+          "해당 프로젝트는 프론트엔드 개발자로서의 역량을 보여주기 위해 React와 TailwindCSS를 활용하여 구축된 정적 사이트로, 프로젝트 경험과 기술 스택을 정리하는 데 목적을 두고 있습니다.",
         technologies: [
           "React",
           "TypeScript",
           "TailwindCSS",
           "Framer Motion",
-          "ViteJS",
           "Firebase",
           "GitHub",
         ],
@@ -115,24 +130,28 @@ export const projectList: ProjectDTO[] = [
         teamSize: 1,
         responsibilities: [
           {
-            title: "성능 최적화 및 UI/UX 작업",
+            title: "UI/UX 작업",
             content: [
-              "Vite 활용 - 빠른 번들링과 최적화된 로딩 성능 제공",
-              "React Router 사용 - SPA(Single Page Application) 구조 설계",
-              "TailwindCSS 적용 - 효율적인 스타일 관리 및 UI의 일관성 유지, 반응형/다크모드 제공",
-              "Framer Motion 활용 - 메인 페이지에 은하수가 떨어지는 듯한 무빙 도트 애니메이션 적용",
+              `TailwindCSS 적용
+              - 효율적인 스타일 관리 및 UI의 일관성 유지, 반응형/다크모드 제공`,
+              `Framer Motion 활용
+              - 메인 페이지에 은하수가 떨어지는 듯한 무빙 도트 애니메이션 적용`,
             ],
           },
           {
             title: "다크 모드 기능",
             content: [
-              "redux-toolkit을 활용하여 테마 상태를 전역으로 관리",
+              "Redux Toolkit을 활용하여 테마 상태를 전역으로 관리",
               "localStorage를 이용해 사용자의 다크 모드 설정을 저장하여 새로고침 후에도 유지",
               "TailwindCSS의 다크 모드 기능과 연계하여 최적화된 UI 제공",
             ],
           },
         ],
-        achievements: ["", ""],
+        achievements: [
+          `해당 프로젝트를 통해 직접 사이트를 제작하며 React의 기본 사용법을 익히고, TailwindCSS를 통한 효율성과 생산성을 직접 체감할 수 있었습니다. 나아가, UX적인 요소에 대해서도 고민하며, 사용자 경험을 고려한 인터페이스 설계의 중요성을 배울 수 있었습니다.
+          
+          추가적으로, 저의 포트폴리오 사이트는 테마 전환과 같은 간단한 상태만을 관리하는 정적 사이트로 Context API만으로도 충분했지만, Redux Toolkit의 기본 사용법을 익히고자 도입하여 직접 상태 관리 도구를 적용해보는 경험을 할 수 있었습니다.`,
+        ],
 
         repositoryUrl: {
           available: true,

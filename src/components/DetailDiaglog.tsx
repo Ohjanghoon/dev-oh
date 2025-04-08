@@ -51,7 +51,7 @@ function DetailDialog({ data: item, handleOpenDialog }: Props) {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -83,7 +83,7 @@ function DetailDialog({ data: item, handleOpenDialog }: Props) {
           <div className="mt-3 text-sm leading-relaxed md:text-base">
             {/* 이미지 슬라이드 영역 */}
             <div className="w-full px-3">
-              <div className="rounded-t-3xl border-[0.25px] bg-[#090909] px-5 pt-5 md:px-6 md:pt-6">
+              <div className="rounded-t-3xl bg-[#090909] px-5 pt-5 md:px-6 md:pt-6">
                 {item.screenshots?.length > 0 ? (
                   <Swiper
                     loop={true}
@@ -220,7 +220,7 @@ function DetailDialog({ data: item, handleOpenDialog }: Props) {
                                 key={"res" + index + "_task" + taskKey}
                                 className="my-1 ml-6"
                               >
-                                {content}
+                                {TextWithBreaks(content)}
                               </li>
                             );
                           })}
@@ -239,7 +239,7 @@ function DetailDialog({ data: item, handleOpenDialog }: Props) {
                   <ul className="m-2 ml-5 mt-3 list-disc">
                     {item.achievements?.map((task, index) => (
                       <li key={"arch" + index} className="my-[6px]">
-                        {task}
+                        {TextWithBreaks(task)}
                       </li>
                     ))}
                   </ul>
@@ -283,6 +283,21 @@ function DetailDialog({ data: item, handleOpenDialog }: Props) {
         </motion.div>
       </motion.div>
     </AnimatePresence>
+  );
+}
+
+function TextWithBreaks(content: string) {
+  return (
+    <>
+      {content.split("\n").map((text) => {
+        return (
+          <>
+            <span>{text}</span>
+            <br />
+          </>
+        );
+      })}
+    </>
   );
 }
 

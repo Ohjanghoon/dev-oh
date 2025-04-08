@@ -166,11 +166,6 @@ export const skillList: SkillDTO[] = [
         color: "#000000",
       },
       {
-        name: "Angular",
-        icon: RiAngularjsFill,
-        color: "#DD0031",
-      },
-      {
         name: "TailwindCSS",
         icon: RiTailwindCssFill,
         color: "#06B6D4",
@@ -181,14 +176,9 @@ export const skillList: SkillDTO[] = [
         color: "#764ABC",
       },
       {
-        name: "Framer motion",
-        icon: "/assets/icons/framer_motion.png",
-        color: "#646CFF",
-      },
-      {
-        name: "ViteJS",
-        icon: "/assets/icons/vitejs.svg",
-        color: "#646CFF",
+        name: "Angular",
+        icon: RiAngularjsFill,
+        color: "#DD0031",
       },
     ],
   },
@@ -246,11 +236,6 @@ export const skillList: SkillDTO[] = [
         name: "Google Workspace",
         icon: FcGoogle,
         color: "",
-      },
-      {
-        name: "Slack",
-        icon: PiSlackLogoFill,
-        color: "#4A154B",
       },
     ],
   },
